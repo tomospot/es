@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Electric Sheep 2026 参加者ポータル</title>
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><meta name="version" content="v66"><title>Electric Sheep 2026 参加者ポータル</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--pk:#D6337A;--pkd:#A8225C;--pks:#FBE4EE;--tl:#2B9EA6;--tld:#1E7B82;--tls:#E1F3F4;--ink:#1B2340;--ink2:#4A5270;--ink3:#8A90A8;--ln:#E6E1E8;--pp:#FBF8FA;--wh:#fff;--nt:#14162B;--sun:#F2B84B;--suns:#FFF4DC;--jp:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;--nm:"Space Grotesk",var(--jp)}
@@ -85,6 +85,7 @@ body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none
 .esg-dmg2{outline:2px dashed var(--pkd);outline-offset:-2px;filter:saturate(.35) contrast(.85) blur(.4px)}
 .esg-dead{visibility:hidden!important}
 .esg-warn{outline:3px solid var(--pk)!important;outline-offset:2px;animation:esg-warn .18s infinite alternate}@keyframes esg-warn{from{box-shadow:0 0 0 0 rgba(214,51,122,.6)}to{box-shadow:0 0 0 8px rgba(214,51,122,0)}}
+#mob-open{background:var(--pk);text-align:center;font-size:14px;padding:10px 14px}#mob-open a{color:#fff;text-decoration:none}#mob-open b{text-decoration:underline}#esg-btn,#ts-btn{bottom:calc(16px + env(safe-area-inset-bottom))}@media(max-width:560px){#esg-btn,#ts-btn{bottom:calc(12px + env(safe-area-inset-bottom))}}
 
 /* ===== テーマソング ===== */
 #ts-btn{position:fixed;right:70px;bottom:16px;z-index:40;width:46px;height:46px;border-radius:50%;border:1px solid var(--ln);background:var(--wh);font-size:20px;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(27,35,64,.14);opacity:.8;transition:opacity .15s,transform .15s}
@@ -94,13 +95,15 @@ body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none
 #ts h2{font-family:var(--jp);font-size:clamp(26px,5vw,36px);color:#fff;margin:0 0 4px}#ts .tsub2{color:rgba(255,255,255,.7);font-size:13.5px;margin:-8px 0 14px}#ts .tsub{color:var(--sun);font-weight:700;font-size:clamp(15px,3vw,18px);margin:0 0 14px}
 #ts .ctl{display:flex;align-items:center;gap:10px;margin-bottom:12px}#ts .ctl button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:9px 20px;cursor:pointer;background:var(--pk);color:#fff}#ts .ctl button.fx{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3)}
 #ts .ctl .tm{font-family:var(--nm);font-size:13px;color:rgba(255,255,255,.7);margin-left:auto}
-#ts .bar{height:4px;background:rgba(255,255,255,.15);border-radius:2px;margin-bottom:12px;overflow:hidden}#ts .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pk),var(--tl))}
+#ts #ts-seek{-webkit-appearance:none;appearance:none;width:100%;height:6px;margin:0 0 12px;border-radius:3px;background:linear-gradient(90deg,var(--pk) 0,var(--tl) var(--p,0%),rgba(255,255,255,.15) var(--p,0%));outline:0;cursor:pointer}#ts #ts-seek::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#fff;border:2px solid var(--pk);box-shadow:0 1px 6px rgba(0,0,0,.4)}#ts #ts-seek::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--pk)}#ts .ctl{flex-wrap:wrap}#ts .ctl button.sc.off{background:var(--tl);border-color:transparent}
 #ts .ly{flex:1;min-height:200px;max-height:52vh;overflow:auto;scrollbar-width:thin;padding:10px 8px;scroll-behavior:auto;text-align:center;-webkit-mask-image:linear-gradient(transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(transparent,#000 8%,#000 92%,transparent)}
 #ts .ly p{margin:0;padding:2px 0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.9)}#ts .ly p.gap{height:10px;padding:0}
 #ts .x{position:absolute;top:12px;right:14px;background:none;border:0;color:rgba(255,255,255,.7);font-size:22px;cursor:pointer}#ts .x:hover{color:#fff}
 #ts .cr{font-size:12px;color:rgba(255,255,255,.6);margin:8px 0 0;text-align:center;background:none;border:0;padding:0}
 @media(max-width:560px){#ts{padding:10px}#ts .box{padding:18px 16px 14px}#ts .ly{max-height:46vh}#ts .ly p{font-size:15px}#ts-btn{right:62px;bottom:12px}}
 </style></head><body>
+<div id="mob-open" hidden><a href="#" target="_top" rel="noopener">📱 スマホでゲームとテーマソングを使うには <b>全画面で開く ↗</b></a></div>
+
 <header class="nav"><div class="wrap"><a class="brand" href="#home">Electric Sheep 2026</a><nav class="menu"><a href="#home">ホーム</a><a href="#timeline">本戦タイムライン</a><a href="#rules">ルール・審査</a><a href="#stay">宿泊・交通</a><a href="#judges">審査員・賞</a><a href="#support">サポートデスク</a><a href="#faq">FAQ</a></nav></div></header>
 <main>
 <section class="page" id="home" data-t="ホーム">
@@ -257,11 +260,11 @@ tick();setInterval(tick,1000);
 <button id="ts-btn" type="button" title="テーマソング" aria-label="テーマソングを再生">♫</button>
 <div id="ts" role="dialog" aria-modal="true" aria-label="テーマソング"><div class="box"><button class="x" type="button" id="ts-x" aria-label="閉じる">×</button>
 <h2>バレました？</h2><p class="tsub">やっぱテーマ・ソングっていりますよね、、？</p><p class="tsub2">……ということで、非公式で作ってしまいました。</p>
-<div class="ctl"><button type="button" id="ts-play">▶ 再生</button><button type="button" class="fx" id="ts-re">最初から</button><span class="tm" id="ts-tm">0:00 / 0:00</span></div>
-<div class="bar"><i id="ts-bar"></i></div>
+<div class="ctl"><button type="button" id="ts-play">▶ 再生</button><button type="button" class="fx" id="ts-re">最初から</button><button type="button" class="fx sc" id="ts-sc">⏸ スクロール停止</button><span class="tm" id="ts-tm">0:00 / 0:00</span></div>
+<input type="range" id="ts-seek" min="0" max="1000" value="0" aria-label="再生位置">
 <div class="ly" id="ts-ly"><p>スタジオのライトが照らす</p><p>ここは未来の入り口</p><p class="gap"></p><p>全国から集まった仲間</p><p>チームで描く</p><p>100歳になった自分を</p><p>幸せにするプロダクトをつくるんだ</p><p class="gap"></p><p>名古屋の地に集まってアイデアが飛ぶ</p><p>隣の誰かが「それいいね」って笑う</p><p>ロマンで熱くなれ</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>まだない世界を この手で描け</p><p>Electric Sheep！ 声上げろ</p><p>バカげてるほど 未来は光る</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>マイクを握れ MC-Shiva</p><p>夢を語れ ドリーム</p><p>100バスに乗って未来へ行こう</p><p>バグばっかバックパッカー 旅は続く</p><p>ちらしすし〜ず アイデア盛り合わせ</p><p>たきささえ 最後までこだわれ</p><p class="gap"></p><p>正解なんてどこにもなくて</p><p>だから自由に ひとつだけプロトタイプ</p><p>ロマンで熱くなれ</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>眠れぬ夜も アイデアに変えて</p><p>Electric Sheep！ 声上げろ</p><p>羊も踊る 未来をつくれ</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>ft_friends 答えは仲間と</p><p>PROCRASTINATER でも今はやる</p><p>O(N) 一気に駆け抜けて</p><p>printf(&quot;Hello,world!&quot;); ここから始まる</p><p>東別院テラスホールで</p><p>10個の空想がひとつの未来になる</p><p>80年先の自分が笑うように</p><p>今 伝えろ 5分で</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>まだない世界を この手で描け</p><p>Electric Sheep！ 声上げろ</p><p>バカげてるほど 未来は光る</p><p>Electric Sheep！ 夜明けまで</p><p>声を重ねて 未来を鳴らせ</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>またどこかで出会える</p><p>100歳になったら思い出す思い出</p></div>
 <p class="cr">作詞：加藤 智紀　作曲・制作：Suno<br>歌詞は曲に合わせてゆっくり流れます（手で動かすと数秒間止まります）</p>
-<audio id="ts-au" src="song.mp3" preload="none"></audio>
+<audio id="ts-au" src="song.mp3?v=v66" preload="none"></audio>
 </div></div>
 <script>
 /* ===== Portal Shooter — 「サポーターズ」編隊を抜け、ボスを倒し、最後にポータルのUIと戦う隠しゲーム ===== */
@@ -360,7 +363,7 @@ function shade(kind){
     +'<div class="ctl"><span><kbd>←→↑↓</kbd>/<kbd>WASD</kbd> 移動</span><span><kbd>Space</kbd> 撃つ</span><span><kbd>X</kbd> ボム</span><span><kbd>C</kbd> 波動砲</span><span><kbd>L</kbd> 資料</span><span><kbd>M</kbd> 消音</span><span><kbd>Esc</kbd> 一時停止</span></div>'
     +'<p class="k"><b>波動砲</b>は各ステージ1回。ボスに照準が追従する必中ビームで、体力を60%削ります。<b>P</b> パワーアップ（10段階、MAXでファンネル）／<b>S</b> スピード／<b>B</b> ボム補充。やられるとパワーが1段階下がります。</p>'
     +'<p class="k">スマホは指でドラッグで移動、弾は自動。ボムと波動砲はHUDのボタンで。最終ステージは本戦タイムラインの一番下から自動で上へ進み、壊し切ると最終ボスが出ます。</p>'
-    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v62</p>';
+    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v66</p>';
   else if(kind==='pause')h='<h2>一時停止</h2><p>スコア <span class="n">'+G.score+'</span></p><button class="go" id="esg-go">続ける</button><button class="fx" id="esg-lgb">集めた資料</button><button class="fx" id="esg-no">やめてページを直す</button>';
   else if(kind==='over'){var st=G.phase==='boss'?'最終ボス戦':G.phase==='final'?'最終ステージ（ポータル侵入）':'ステージ '+(G.stage+1)+(G.boss?'のボス戦':'');
     h='<h2>'+(G.win?'完走お疲れ様でした':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。作るの大変だったので、プレイしてもらって何よりです。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
@@ -836,9 +839,9 @@ function ship(x,y,mx){
 }
 
 })();
-</script><script>
+</script><script>(function(){try{if(window.self!==window.top&&(window.innerWidth<820||'ontouchstart' in window)){var m=document.getElementById('mob-open');m.querySelector('a').href=location.href.split('#')[0];m.hidden=false}}catch(e){}})();
 (function(){
-var B=document.getElementById('ts-btn'),P=document.getElementById('ts'),A=document.getElementById('ts-au'),PL=document.getElementById('ts-play'),RE=document.getElementById('ts-re'),TM=document.getElementById('ts-tm'),BAR=document.getElementById('ts-bar'),LY=document.getElementById('ts-ly');
+var B=document.getElementById('ts-btn'),P=document.getElementById('ts'),A=document.getElementById('ts-au'),PL=document.getElementById('ts-play'),RE=document.getElementById('ts-re'),TM=document.getElementById('ts-tm'),SK=document.getElementById('ts-seek'),SC=document.getElementById('ts-sc'),LY=document.getElementById('ts-ly');var auto=true,seeking=false;
 var lines=Array.prototype.slice.call(LY.querySelectorAll('p')).filter(function(p){return !p.classList.contains('gap')});
 var hold=0,LEAD=0.04,TAIL=0.06; /* 前奏・後奏ぶんの割合（曲全体に対して） */
 function fmt(t){t=Math.max(0,Math.floor(t||0));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0')}
@@ -850,14 +853,17 @@ P.addEventListener('click',function(e){if(e.target===P)close()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&P.classList.contains('on'))close()});
 PL.addEventListener('click',function(){if(A.paused)A.play();else A.pause()});
 RE.addEventListener('click',function(){A.currentTime=0;A.play()});
+SC.addEventListener('click',function(){auto=!auto;SC.textContent=auto?'⏸ スクロール停止':'▶ スクロール開始';SC.classList.toggle('off',!auto);if(auto){hold=0;sync()}});
+SK.addEventListener('input',function(){seeking=true;var d=A.duration||0;if(d){var t=SK.value/1000*d;TM.textContent=fmt(t)+' / '+fmt(d);SK.style.setProperty('--p',(SK.value/10)+'%')}});
+SK.addEventListener('change',function(){var d=A.duration||0;if(d)A.currentTime=SK.value/1000*d;seeking=false;lastT=-1;hold=0;sync();if(A.paused)A.play()});
 A.addEventListener('play',function(){PL.textContent='❚❚ 一時停止'});A.addEventListener('pause',function(){PL.textContent='▶ 再生'});
 LY.addEventListener('wheel',function(){hold=Date.now()+3000},{passive:true});LY.addEventListener('touchmove',function(){hold=Date.now()+3000},{passive:true});
 var lastT=0,lastAt=0,raf=0;
 function est(){var t=A.currentTime||0;if(!A.paused&&A.currentTime===lastT)return lastT+(performance.now()-lastAt)/1000;lastT=t;lastAt=performance.now();return t}
 function sync(){
-  var d=A.duration||0,t=est();TM.textContent=fmt(t)+' / '+fmt(d);if(!d)return;BAR.style.width=(t/d*100)+'%';
+  var d=A.duration||0,t=est();TM.textContent=fmt(t)+' / '+fmt(d);if(!d)return;if(!seeking){SK.value=Math.round(t/d*1000);SK.style.setProperty('--p',(t/d*100)+'%')}
   var p=(t/d-LEAD)/(1-LEAD-TAIL);p=Math.max(0,Math.min(1,p));
-  if(Date.now()>hold){LY.scrollTop=p*(LY.scrollHeight-LY.clientHeight)}
+  if(auto&&Date.now()>hold){LY.scrollTop=p*(LY.scrollHeight-LY.clientHeight)}
 }
 function loop(){sync();if(!A.paused)raf=requestAnimationFrame(loop)}
 A.addEventListener('play',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)});A.addEventListener('seeked',sync);A.addEventListener('loadedmetadata',sync);A.addEventListener('pause',sync);
