@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><meta name="version" content="v66"><title>Electric Sheep 2026 参加者ポータル</title>
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><meta name="version" content="v67"><title>Electric Sheep 2026 参加者ポータル</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--pk:#D6337A;--pkd:#A8225C;--pks:#FBE4EE;--tl:#2B9EA6;--tld:#1E7B82;--tls:#E1F3F4;--ink:#1B2340;--ink2:#4A5270;--ink3:#8A90A8;--ln:#E6E1E8;--pp:#FBF8FA;--wh:#fff;--nt:#14162B;--sun:#F2B84B;--suns:#FFF4DC;--jp:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;--nm:"Space Grotesk",var(--jp)}
@@ -27,7 +27,9 @@ a{color:var(--pkd);text-underline-offset:3px}h1,h2,h3{line-height:1.35;margin:0;
 .kv{display:grid;grid-template-columns:150px 1fr;gap:8px 18px;margin:0}.kv dt{font-weight:700;color:var(--ink2);font-size:14px}.kv dd{margin:0}
 table{border-collapse:collapse;width:100%;font-size:15px;background:var(--wh);border-radius:12px;overflow:hidden;border:1px solid var(--ln)}th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--ln);vertical-align:top}th{background:#F3EEF2;font-size:13px;color:var(--ink2)}tr:last-child td{border-bottom:0}
 .done td{text-decoration:line-through;color:var(--ink3)}.done td:first-child:after{content:"終了";text-decoration:none;display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--tld);background:var(--tls);padding:1px 7px;border-radius:999px}
-.ck{list-style:none;padding:0}.ck li{padding:10px 12px 10px 42px;position:relative;background:var(--wh);border:1px solid var(--ln);border-radius:10px;margin:6px 0}.ck li:before{content:"";position:absolute;left:12px;top:14px;width:18px;height:18px;border:2px solid var(--pk);border-radius:5px}.ck .m:before{background:var(--pk);box-shadow:inset 0 0 0 3px #fff}.ck small{display:block;color:var(--ink2);font-size:13px}
+.ck{list-style:none;padding:0}.ck li{padding:10px 12px 10px 42px;position:relative;background:var(--wh);border:1px solid var(--ln);border-radius:10px;margin:6px 0}.ck li:before{content:"";position:absolute;left:12px;top:14px;width:18px;height:18px;border:2px solid var(--pk);border-radius:5px}.ck li{cursor:pointer;user-select:none;-webkit-user-select:none;transition:background .15s}.ck li:hover{background:var(--pks)}
+.ck li.done:before{background:var(--pk);border-color:var(--pk)}.ck li.done:after{content:"";position:absolute;left:18px;top:16px;width:5px;height:10px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.ck li.done strong{color:var(--ink3);text-decoration:line-through}.ck li.done small,.ck li.done .sub li{color:var(--ink3)}.ck small{display:block;color:var(--ink2);font-size:13px}
 .ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.card{padding:20px 22px;margin:12px 0}.card .role{font-size:13px;color:var(--tld);font-weight:700}.card .name{font-size:22px;font-weight:900;margin-bottom:8px}.card .by{font-size:13px;color:var(--ink2)}.card .ttl{font-size:21px;font-weight:900;margin:2px 0 8px}.card .win{color:var(--pkd)}.card p{font-size:14.5px;color:var(--ink2);margin:0}.card .pz{margin-top:8px;padding:10px 14px;background:var(--pks);border-radius:10px}.card .pz b{color:var(--pkd)}.card .wn{font-size:13.5px;margin-top:6px}
 .pill{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}.pill li{background:var(--wh);border:1px solid var(--ln);border-radius:999px;padding:6px 14px;font-size:14px;margin:0}
 .teams{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}.teams li{background:var(--wh);border:1px solid var(--ln);border-radius:10px;padding:8px 12px;font-size:15px;margin:0}.teams .num{color:var(--pk);margin-right:8px;font-size:13px}
@@ -116,7 +118,7 @@ body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none
 <div class="wrap">
 <div class="nowbox" id="nb"><small>いま進行中のプログラム</small><b id="nw"></b><span class="sm" id="nd"></span></div>
 <div class="quick"><a href="#timeline"><b>本戦タイムライン</b><span>2日間の流れと、各時間帯でチームがやること</span></a><a href="#rules"><b>ルール・審査</b><span>審査基準、プレゼン形式、軍資金3万円、著作権</span></a><a href="#stay"><b>宿泊・交通</b><span>名鉄イン名古屋金山、交通費、会場アクセス</span></a><a href="#judges"><b>審査員・特別賞</b><span>審査員3名と、サポーター企業5社の特別賞</span></a><a href="#support"><b>サポートデスク</b><span>当日の3つのデスクの役割と、担当者プロフィール</span></a><a href="#faq"><b>FAQ</b><span>よくある質問</span></a></div>
-<div class="sec"><h3>本戦前に必ず確認</h3><ul class="ck">
+<div class="sec"><h3>本戦前に必ず確認</h3><p class="sm" style="margin:0 0 8px">クリックでチェックできます（この端末に保存されます）</p><ul class="ck">
 <li class="m"><strong>当日37℃を超える熱がある場合は参加できません</strong><small>運営・加藤まで事前に連絡してください。</small></li>
 <li class="m"><strong>持ち物</strong><small><ul class="sub"><li>発表に必要なもの（PC、ハードウェア、3Dプリンタなどの機材）</li><li>軍資金精算用の領収書と代表者の印鑑</li><li>懇親会での交流用の名刺（任意）</li></ul></small></li>
 <li class="m"><strong>交通費の領収書（愛知県外から参加の方）</strong><small>申請はキックオフの時と同じくGoogleフォームを使用します。</small></li>
@@ -251,6 +253,11 @@ var box=document.getElementById('nb');box.classList.remove('on');document.queryS
 var ymd=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0'),list=document.querySelector('.tl[data-date="'+ymd+'"]');if(!list)return;
 var cur=n.getHours()*60+n.getMinutes();list.querySelectorAll('li[data-s]').forEach(function(l){if(cur>=mn(l.getAttribute('data-s'))&&cur<mn(l.getAttribute('data-e'))){l.classList.add('now');document.getElementById('nw').textContent=l.querySelector('h4').textContent;var d=l.querySelector('.do');document.getElementById('nd').textContent=d?d.textContent.trim().slice(0,90):'';box.classList.add('on')}})}
 tick();setInterval(tick,1000);
+/* チェックリスト：クリックでON/OFF、この端末に保存 */
+(function(){var K='es2026-ck',st={};try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+var items=document.querySelectorAll('.ck>li');items.forEach(function(li,i){if(st[i])li.classList.add('done');li.setAttribute('role','checkbox');li.setAttribute('tabindex','0');li.setAttribute('aria-checked',st[i]?'true':'false');
+function tg(){var on=li.classList.toggle('done');li.setAttribute('aria-checked',on?'true':'false');st[i]=on?1:0;try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+li.addEventListener('click',function(e){if(e.target.closest('a'))return;tg()});li.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();tg()}})})})();
 })();
 </script>
 <button id="esg-btn" type="button" title="Portal Shooter（隠しゲーム）" aria-label="隠しゲームを遊ぶ">🚀</button>
@@ -264,7 +271,7 @@ tick();setInterval(tick,1000);
 <input type="range" id="ts-seek" min="0" max="1000" value="0" aria-label="再生位置">
 <div class="ly" id="ts-ly"><p>スタジオのライトが照らす</p><p>ここは未来の入り口</p><p class="gap"></p><p>全国から集まった仲間</p><p>チームで描く</p><p>100歳になった自分を</p><p>幸せにするプロダクトをつくるんだ</p><p class="gap"></p><p>名古屋の地に集まってアイデアが飛ぶ</p><p>隣の誰かが「それいいね」って笑う</p><p>ロマンで熱くなれ</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>まだない世界を この手で描け</p><p>Electric Sheep！ 声上げろ</p><p>バカげてるほど 未来は光る</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>マイクを握れ MC-Shiva</p><p>夢を語れ ドリーム</p><p>100バスに乗って未来へ行こう</p><p>バグばっかバックパッカー 旅は続く</p><p>ちらしすし〜ず アイデア盛り合わせ</p><p>たきささえ 最後までこだわれ</p><p class="gap"></p><p>正解なんてどこにもなくて</p><p>だから自由に ひとつだけプロトタイプ</p><p>ロマンで熱くなれ</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>眠れぬ夜も アイデアに変えて</p><p>Electric Sheep！ 声上げろ</p><p>羊も踊る 未来をつくれ</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>ft_friends 答えは仲間と</p><p>PROCRASTINATER でも今はやる</p><p>O(N) 一気に駆け抜けて</p><p>printf(&quot;Hello,world!&quot;); ここから始まる</p><p>東別院テラスホールで</p><p>10個の空想がひとつの未来になる</p><p>80年先の自分が笑うように</p><p>今 伝えろ 5分で</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>まだない世界を この手で描け</p><p>Electric Sheep！ 声上げろ</p><p>バカげてるほど 未来は光る</p><p>Electric Sheep！ 夜明けまで</p><p>声を重ねて 未来を鳴らせ</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>またどこかで出会える</p><p>100歳になったら思い出す思い出</p></div>
 <p class="cr">作詞：加藤 智紀　作曲・制作：Suno<br>歌詞は曲に合わせてゆっくり流れます（手で動かすと数秒間止まります）</p>
-<audio id="ts-au" src="song.mp3?v=v66" preload="none"></audio>
+<audio id="ts-au" src="song.mp3?v=v67" preload="none"></audio>
 </div></div>
 <script>
 /* ===== Portal Shooter — 「サポーターズ」編隊を抜け、ボスを倒し、最後にポータルのUIと戦う隠しゲーム ===== */
@@ -363,7 +370,7 @@ function shade(kind){
     +'<div class="ctl"><span><kbd>←→↑↓</kbd>/<kbd>WASD</kbd> 移動</span><span><kbd>Space</kbd> 撃つ</span><span><kbd>X</kbd> ボム</span><span><kbd>C</kbd> 波動砲</span><span><kbd>L</kbd> 資料</span><span><kbd>M</kbd> 消音</span><span><kbd>Esc</kbd> 一時停止</span></div>'
     +'<p class="k"><b>波動砲</b>は各ステージ1回。ボスに照準が追従する必中ビームで、体力を60%削ります。<b>P</b> パワーアップ（10段階、MAXでファンネル）／<b>S</b> スピード／<b>B</b> ボム補充。やられるとパワーが1段階下がります。</p>'
     +'<p class="k">スマホは指でドラッグで移動、弾は自動。ボムと波動砲はHUDのボタンで。最終ステージは本戦タイムラインの一番下から自動で上へ進み、壊し切ると最終ボスが出ます。</p>'
-    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v66</p>';
+    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v67</p>';
   else if(kind==='pause')h='<h2>一時停止</h2><p>スコア <span class="n">'+G.score+'</span></p><button class="go" id="esg-go">続ける</button><button class="fx" id="esg-lgb">集めた資料</button><button class="fx" id="esg-no">やめてページを直す</button>';
   else if(kind==='over'){var st=G.phase==='boss'?'最終ボス戦':G.phase==='final'?'最終ステージ（ポータル侵入）':'ステージ '+(G.stage+1)+(G.boss?'のボス戦':'');
     h='<h2>'+(G.win?'完走お疲れ様でした':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。作るの大変だったので、プレイしてもらって何よりです。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
