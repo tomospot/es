@@ -316,7 +316,7 @@ function size(){DPR=Math.min(window.devicePixelRatio||1,2);W=window.innerWidth;H
 function fresh(){
   G={score:0,kills:0,lives:3,t:0,ship:{x:W/2,y:H-96,inv:0,cool:0},bul:[],en:[],q:[],bolt:[],pt:[],pw:[],boss:null,laser:null,
      phase:'wave',stage:-1,stT:0,fade:.62,spawn:2,clr:{},over:false,win:false,msgT:0,msgPri:0,
-     got:[],infoT:0,lapT:0,visN:0,visIn:0,wave:1,waveT:0,waveTick:0,waveA:-Math.PI/2,pk:0,pow:2,spd:0,bomb:2,bombT:0,shield:false,adv:0,uiT:2.5,cleared:false,bitT:0};
+     god:false,got:[],infoT:0,lapT:0,visN:0,visIn:0,wave:1,waveT:0,waveTick:0,waveA:-Math.PI/2,pk:0,pow:2,spd:0,bomb:2,bombT:0,shield:false,adv:0,uiT:2.5,cleared:false,bitT:0};
   ROOT.classList.add('wave');
   updHud();
 }
@@ -336,10 +336,10 @@ function shade(kind){
     +'<div class="ctl"><span><kbd>←→↑↓</kbd>/<kbd>WASD</kbd> 移動</span><span><kbd>Space</kbd> 撃つ</span><span><kbd>X</kbd> ボム</span><span><kbd>C</kbd> 波動砲</span><span><kbd>L</kbd> 資料</span><span><kbd>M</kbd> 消音</span><span><kbd>Esc</kbd> 一時停止</span></div>'
     +'<p class="k"><b>波動砲</b>は各ステージ1回。ボスに照準が追従する必中ビームで、体力を60%削ります。<b>P</b> パワーアップ（10段階、MAXでファンネル）／<b>S</b> スピード／<b>B</b> ボム補充。やられるとパワーが1段階下がります。</p>'
     +'<p class="k">スマホは指でドラッグで移動、弾は自動。ボムと波動砲はHUDのボタンで。最終ステージは本戦タイムラインの一番下から自動で上へ進み、壊し切ると最終ボスが出ます。</p>'
-    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v50</p>';
+    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v54</p>';
   else if(kind==='pause')h='<h2>一時停止</h2><p>スコア <span class="n">'+G.score+'</span></p><button class="go" id="esg-go">続ける</button><button class="fx" id="esg-lgb">集めた資料</button><button class="fx" id="esg-no">やめてページを直す</button>';
   else if(kind==='over'){var st=G.phase==='boss'?'最終ボス戦':G.phase==='final'?'最終ステージ（ポータル侵入）':'ステージ '+(G.stage+1)+(G.boss?'のボス戦':'');
-    h='<h2>'+(G.win?'ポータル制圧完了':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。ポータルは無事……ではありません。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
+    h='<h2>'+(G.win?'完走お疲れ様でした':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。作るの大変だったので、プレイしてもらって何よりです。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
   else if(kind==='info'){var it=INFO[G.got[G.got.length-1]],bn=G.got.length;
     h='<div class="cap"><span>資料 <b>'+bn+'</b>/'+INFO.length+'</span><i>'+it.p+'</i></div><h2 class="it">'+it.t+'</h2><p class="ib">'+it.b+'</p>'
      +'<p class="k">'+powText(bn-1)+'</p><button class="go" id="esg-go">了解、続ける <kbd>Space</kbd></button><button class="fx" id="esg-lgb">集めた資料</button>'}
@@ -459,7 +459,7 @@ function bossDeath(b,dt){
   if(b.dying<=0){G.boss=null;G.kills++;G.score+=b.sc;snd('boom');
     boom(b.x,b.y,b.c,SUN,60);boom(b.x,b.y,'#fff',b.c,40);
     for(var i=0;i<3;i++)G.pw.push({k:['P','P','S','B'][Math.floor(Math.random()*4)],x:b.x+(i-1)*44,y:b.y,t:i*.5});
-    if(b.kind==='core'){flash('<b>ポータル制圧完了</b>',3000,3);G.score+=5000;updHud();gameover(true)}
+    if(b.kind==='core'){flash('<b>完走お疲れ様でした</b>',3000,3);G.score+=5000;updHud();gameover(true)}
     else{flash('<b>BOSS 撃破 +'+b.sc+'</b><span>資料を回収した</span>',1500,2);if(G.got.length<INFO.length)G.infoT=1.1}
     updHud();
   }
@@ -521,6 +521,7 @@ window.addEventListener('keydown',function(e){
   if((k==='l'||k==='L')&&!SH.classList.contains('on')&&run){paused=true;run=false;shadeBack='pause';shade('log');return}
   if(!run)return;
   if(k==='m'||k==='M'){mute=!mute;flash('<span>'+(mute?'消音':'音あり')+'</span>',700);return}
+  if(k==='z'||k==='Z'){if(e.repeat)return;G.god=!G.god;flash('<b style="color:'+SUN+'">無敵モード '+(G.god?'ON':'OFF')+'</b><span>'+(G.god?'電気羊が追尾・一撃必殺':'通常に戻ります')+'</span>',1200,2);snd('get');return}
   if(k==='x'||k==='X'||k==='b'||k==='B'){useBomb();return}
   if(k==='c'||k==='C'||k==='v'||k==='V'){useWave();return}
   if(G.phase==='final'&&FP.length>1){if(k==='n'||k==='N'){goPage(curPage()+1);return}if(k>='1'&&k<='7'){goPage(+k-1);return}}
@@ -564,6 +565,7 @@ var PN=[1,2,2,3,3,4,4,5,5,5],PD=[0,0,1,1,1,2,2,2,3,3],PDM=[1,1,1,2,2,2,3,3,3,3],
 /* 今のパワーで1秒に当てられる弾数の目安。ボスのHPはこれ×秒数で決める（1発=1） */
 function hps(){var p=G.pow;return (PN[p-1]+PD[p-1]*1.2)/PC[p-1]+(p>=MAXP?12:0)}
 function fireShip(S){
+  if(G.god){for(var gi=-1;gi<=1;gi++){var ga=-Math.PI/2+gi*.45;G.bul.push({x:S.x+gi*10,y:S.y-12,py:S.y-12,vx:Math.cos(ga)*300,vy:Math.sin(ga)*300,d:999,hom:true,sp:300,life:4.5,tr:[]})}S.cool=.4;snd('shot');return}
   var p=G.pow,d=PDM[p-1],n=PN[p-1],dg=PD[p-1],i,spd=900+(p-1)*20;
   for(i=0;i<n;i++)G.bul.push({x:S.x+(i-(n-1)/2)*Math.min(9,26/Math.max(1,n-1)),y:S.y-14,py:S.y-14,vx:0,vy:-spd,d:d});
   for(i=1;i<=dg;i++){var vx=120+i*90;G.bul.push({x:S.x-8,y:S.y-8,py:S.y-8,vx:-vx,vy:-spd*.9,d:d});G.bul.push({x:S.x+8,y:S.y-8,py:S.y-8,vx:vx,vy:-spd*.9,d:d})}
@@ -609,24 +611,24 @@ function update(dt){
   }else{S.y=Math.max(40,Math.min(G.boss?H-60:H-24,S.y))}
   if(S.inv>0)S.inv-=dt;
   S.cool-=dt;
-  var fire=keys[' ']||keys.z||touch;
+  var fire=keys[' ']||touch;
   if(fire&&S.cool<=0)fireShip(S);
-  if(G.pow>=MAXP){G.bitT-=dt;if(G.bitT<=0){G.bitT=.32;var tg0=nearestTarget(S.x,S.y);if(tg0){for(var bi=0;bi<4;bi++){var bp=bitPos(bi),ang=-Math.PI/2+(bi-1.5)*.5;G.bul.push({x:bp.x,y:bp.y,py:bp.y,vx:Math.cos(ang)*650,vy:Math.sin(ang)*650,d:2,hom:true,life:2.2,tr:[]})}snd('shot')}}}
+  if(G.pow>=MAXP){G.bitT-=dt;if(G.bitT<=0){G.bitT=.45;var tg0=nearestTarget(S.x,S.y);if(tg0){for(var bi=0;bi<4;bi++){var bp=bitPos(bi),ang=-Math.PI/2+(bi-1.5)*.5;G.bul.push({x:bp.x,y:bp.y,py:bp.y,vx:Math.cos(ang)*420,vy:Math.sin(ang)*420,d:2,hom:true,sp:420,life:3,tr:[]})}snd('shot')}}}
   if(fin)rects();
   /* 弾 */
   for(i=G.bul.length-1;i>=0;i--){
     b=G.bul[i];b.py=b.y;
-    if(b.hom){b.life-=dt;var tg=nearestTarget(b.x,b.y);if(tg)steer(b,tg.x,tg.y,650,7,dt);b.tr.push(b.x,b.y);if(b.tr.length>10)b.tr.splice(0,2);if(b.life<=0){G.bul.splice(i,1);continue}}
+    if(b.hom){b.life-=dt;var tg=nearestTarget(b.x,b.y);if(tg)steer(b,tg.x,tg.y,b.sp||650,6,dt);b.tr.push(b.x,b.y);if(b.tr.length>10)b.tr.splice(0,2);if(b.life<=0){G.bul.splice(i,1);continue}}
     b.y+=b.vy*dt;b.x+=b.vx*dt;
     if(b.y<-20||b.y>H+20||b.x<-20||b.x>W+20){G.bul.splice(i,1);continue}
     var hit=false;
     for(j=G.en.length-1;j>=0;j--){var e=G.en[j];if(hitSeg(b,e.x,e.y,22,20)){hit=true;e.hp-=b.d;e.flash=.12;spark(b.x,b.y,e.c,6);
       if(e.hp<=0){G.en.splice(j,1);G.kills++;G.score+=150;boom(e.x,e.y,e.c,'#ffffff',22);snd('boom');flash('<b>+150</b>',400);drop(e.x,e.y)}else snd('hit');break}}
-    if(!hit&&G.boss&&!G.boss.dying&&(!G.boss.entered||G.boss.guard>0)&&G.boss.y>0&&hitSeg(b,G.boss.x,G.boss.y,G.boss.r,G.boss.r)){hit=true;spark(b.x,b.y,'#fff',3)}
-    if(!hit&&G.boss&&!G.boss.dying&&G.boss.entered&&!(G.boss.guard>0)){var bo=G.boss;
-      for(j=0;j<bo.parts.length;j++){var pp=bo.parts[j];if(pp.hp>0&&hitSeg(b,pp.x,pp.y,32,30)){hit=true;pp.hp-=1;pp.flash=.1;spark(b.x,b.y,SUN,5);G.score+=10;
+    if(!hit&&G.boss&&!G.boss.dying&&!G.god&&(!G.boss.entered||G.boss.guard>0)&&G.boss.y>0&&hitSeg(b,G.boss.x,G.boss.y,G.boss.r,G.boss.r)){hit=true;spark(b.x,b.y,'#fff',3)}
+    if(!hit&&G.boss&&!G.boss.dying&&(G.god||(G.boss.entered&&!(G.boss.guard>0)))){var bo=G.boss;
+      for(j=0;j<bo.parts.length;j++){var pp=bo.parts[j];if(pp.hp>0&&hitSeg(b,pp.x,pp.y,32,30)){hit=true;pp.hp-=G.god?pp.hp:1;pp.flash=.1;spark(b.x,b.y,SUN,5);G.score+=10;
         if(pp.hp<=0){G.kills++;G.score+=800;boom(pp.x,pp.y,SUN,'#fff',26);snd('boom');flash('<b>「'+pp.ch+'」撃破</b>',700,1);G.pw.push({k:'P',x:pp.x,y:pp.y,t:0})}else snd('hit');break}}
-      if(!hit&&bo.y>0&&(!bo.parts.length||bo.parts.every(function(p){return p.hp<=0}))&&hitSeg(b,bo.x,bo.y,bo.r*.9,bo.r*.85)){hit=true;hurtBoss(bo,1,b.x,b.y);snd('hit')}
+      if(!hit&&bo.y>0&&(G.god||!bo.parts.length||bo.parts.every(function(p){return p.hp<=0}))&&hitSeg(b,bo.x,bo.y,bo.r*.9,bo.r*.85)){hit=true;hurtBoss(bo,G.god?bo.hp:1,b.x,b.y);snd('hit')}
       else if(!hit&&bo.parts.length&&bo.y>0&&hitSeg(b,bo.x,bo.y,bo.r,bo.r)){hit=true;spark(b.x,b.y,'#fff',4)} /* コアはまだ無敵 */
     }
     if(!hit&&fin){
@@ -694,7 +696,7 @@ function update(dt){
   }
   if(bossPh)TL.textContent=G.boss?G.boss.hp:0;
 }
-function ouch(){var S=G.ship;if(G.shield){G.shield=false;S.inv=1.2;spark(S.x,S.y,TLC,20);snd('hit');flash('<b>シールド破損</b>',700,1);return}S.inv=2.5;G.lives--;if(G.pow>1)G.pow--;boom(S.x,S.y,PK,SUN,24);snd('ouch');updHud();if(G.lives<=0){snd('boom');gameover(false)}else flash('<b>あと'+G.lives+'機</b>',900,1)}
+function ouch(){var S=G.ship;if(G.god){spark(S.x,S.y,SUN,8);return}if(G.shield){G.shield=false;S.inv=1.2;spark(S.x,S.y,TLC,20);snd('hit');flash('<b>シールド破損</b>',700,1);return}S.inv=2.5;G.lives--;if(G.pow>1)G.pow--;boom(S.x,S.y,PK,SUN,24);snd('ouch');updHud();if(G.lives<=0){snd('boom');gameover(false)}else flash('<b>あと'+G.lives+'機</b>',900,1)}
 
 /* ---------- UI破壊 ---------- */
 function damage(t,x,y){
@@ -744,7 +746,7 @@ function draw(){
   /* 破片 */
   G.pt.forEach(function(p){X.save();X.globalAlpha=Math.min(1,p.t*2);X.translate(p.x,p.y);X.rotate(p.a);X.fillStyle=p.c;X.fillRect(-p.w/2,-p.h/2,p.w,p.h);X.restore()});
   /* 弾 */
-  G.bul.forEach(function(b){if(b.hom&&b.tr.length>3){X.save();X.strokeStyle='rgba(111,227,255,.55)';X.lineWidth=2;X.beginPath();X.moveTo(b.tr[0],b.tr[1]);for(var k=2;k<b.tr.length;k+=2)X.lineTo(b.tr[k],b.tr[k+1]);X.lineTo(b.x,b.y);X.stroke();X.restore()}X.save();X.translate(b.x,b.y);X.rotate(Math.atan2(b.vy,b.vx)+1.5708);var c=b.d>=4?'#fff':b.d>=2?SUN:'#6FE3FF',w=2.5+b.d*.8;X.shadowColor=c;X.shadowBlur=12;X.fillStyle=c;X.beginPath();X.roundRect(-w,-10,w*2,20,3);X.fill();X.shadowBlur=0;X.fillStyle=b.d>=4?PK:'#fff';X.fillRect(-1,-7,2,10);X.restore()});
+  G.bul.forEach(function(b){if(b.hom){if(b.tr.length>3){X.save();X.strokeStyle='rgba(111,227,255,.55)';X.lineWidth=2;X.beginPath();X.moveTo(b.tr[0],b.tr[1]);for(var k=2;k<b.tr.length;k+=2)X.lineTo(b.tr[k],b.tr[k+1]);X.lineTo(b.x,b.y);X.stroke();X.restore()}sheep(b.x,b.y,b.d>=999?.8:.55,Math.atan2(b.vy,b.vx),G.t+b.x*.01);return}X.save();X.translate(b.x,b.y);X.rotate(Math.atan2(b.vy,b.vx)+1.5708);var c=b.d>=4?'#fff':b.d>=2?SUN:'#6FE3FF',w=2.5+b.d*.8;X.shadowColor=c;X.shadowBlur=12;X.fillStyle=c;X.beginPath();X.roundRect(-w,-10,w*2,20,3);X.fill();X.shadowBlur=0;X.fillStyle=b.d>=4?PK:'#fff';X.fillRect(-1,-7,2,10);X.restore()});
   /* 敵弾 */
   G.bolt.forEach(function(o){if(o.hom){if(o.tr.length>3){X.save();X.strokeStyle='rgba(255,140,66,.5)';X.lineWidth=3;X.beginPath();X.moveTo(o.tr[0],o.tr[1]);for(var k=2;k<o.tr.length;k+=2)X.lineTo(o.tr[k],o.tr[k+1]);X.lineTo(o.x,o.y);X.stroke();X.restore()}X.save();X.translate(o.x,o.y);X.rotate(Math.atan2(o.vy,o.vx));X.shadowColor=ORG;X.shadowBlur=14;X.fillStyle=ORG;X.beginPath();X.moveTo(12,0);X.lineTo(-8,-6);X.lineTo(-4,0);X.lineTo(-8,6);X.closePath();X.fill();X.shadowBlur=0;X.fillStyle='#fff';X.beginPath();X.arc(3,0,2.5,0,6.29);X.fill();X.restore();return}X.save();X.translate(o.x,o.y);X.rotate(Math.atan2(o.vy,o.vx)+1.5708);X.lineJoin='round';X.lineCap='round';X.beginPath();X.moveTo(0,-13);X.lineTo(-6,-3);X.lineTo(5,0);X.lineTo(-2,13);X.strokeStyle='rgba(20,22,43,.9)';X.lineWidth=7;X.stroke();X.strokeStyle=o.c||TLC;X.lineWidth=4;X.shadowColor=o.c||TLC;X.shadowBlur=10;X.stroke();X.strokeStyle='#fff';X.lineWidth=1.5;X.shadowBlur=0;X.stroke();X.restore()});
   G.en.forEach(function(e){badge(e.x,e.y,21,e.ch,e.c,e.flash>0,Math.sin(e.t*3)*.06,19)});
@@ -752,7 +754,8 @@ function draw(){
     G.pw.forEach(function(p){X.save();X.translate(p.x,p.y+Math.sin(p.t*4)*3);var c=p.k==='P'?PK:p.k==='S'?TLC:SUN;X.shadowColor=c;X.shadowBlur=16;X.fillStyle=c;X.beginPath();X.arc(0,0,15,0,6.29);X.fill();X.shadowBlur=0;X.strokeStyle='#fff';X.lineWidth=2;X.stroke();X.fillStyle='#fff';X.font='700 15px "Space Grotesk",sans-serif';X.textAlign='center';X.textBaseline='middle';X.fillText(p.k,0,1);X.restore()});
   /* 自機 */
   if(G.shield){X.save();X.strokeStyle=TLC;X.lineWidth=2.5;X.shadowColor=TLC;X.shadowBlur=12;X.globalAlpha=.8+Math.sin(G.t*8)*.15;X.beginPath();X.arc(S.x,S.y-2,26,0,6.29);X.stroke();X.restore()}
-  if(!(S.inv>0&&Math.floor(S.inv*12)%2===0))ship(S.x,S.y,G.pow>=MAXP);
+  if(G.god){X.save();X.strokeStyle=SUN;X.lineWidth=3;X.shadowColor=SUN;X.shadowBlur=16;X.globalAlpha=.9;X.beginPath();X.arc(S.x,S.y-2,30,0,6.29);X.stroke();X.restore()}
+  if(G.god||!(S.inv>0&&Math.floor(S.inv*12)%2===0))ship(S.x,S.y,G.pow>=MAXP);
   if(G.pow>=MAXP)for(var bi=0;bi<4;bi++){var bp=bitPos(bi);X.save();X.translate(bp.x,bp.y);X.rotate(G.t*4+bi);X.shadowColor='#6FE3FF';X.shadowBlur=10;X.fillStyle='#6FE3FF';X.beginPath();X.moveTo(0,-7);X.lineTo(5,4);X.lineTo(-5,4);X.closePath();X.fill();X.restore()}
   /* ボスのHPゲージ（画面下・全幅） */
   if(G.boss&&G.boss.y>0){var bo=G.boss,ph=0,pl=0;bo.parts.forEach(function(p){ph+=Math.max(0,p.hp);pl+=p.max});var cur=bo.hp+ph,tot=bo.max+pl,bw=W-32;
@@ -761,6 +764,19 @@ function draw(){
     if(pl){X.fillStyle=SUN;X.fillRect(16,H-18,bw*ph/tot,10);X.fillStyle=bo.c;X.fillRect(16+bw*ph/tot,H-18,bw*bo.hp/tot,10)}else{X.fillStyle=bo.c;X.fillRect(16,H-18,bw*bo.hp/tot,10)}
     X.fillStyle='#fff';X.font='700 12px '+JP;X.textAlign='left';X.textBaseline='alphabetic';X.fillText('BOSS  '+bo.name+(bo.kind==='core'?(pl&&ph>0?'（文字を全部落とすとコア露出）':'（コア露出）'):''),16,H-26);
     X.font='700 13px "Space Grotesk",sans-serif';X.textAlign='right';X.fillText('HP '+cur+' / '+tot+'  （1発=1）',W-16,H-26);X.restore()}
+}
+/* 電気羊：自機の誘導弾の見た目。sc=大きさ, a=進行方向 */
+function sheep(x,y,sc,a,t){
+  X.save();X.translate(x,y);var left=Math.cos(a)<0;X.rotate(left?-(a-Math.PI/2)*.35:(a+Math.PI/2)*.35);X.scale(left?-sc:sc,sc);
+  if(Math.floor(t*17)%5===0){X.strokeStyle=TLC;X.lineWidth=2;X.shadowColor=TLC;X.shadowBlur=8;X.beginPath();var zx=(Math.random()-.5)*30;X.moveTo(zx,-30);X.lineTo(zx-4,-22);X.lineTo(zx+3,-19);X.lineTo(zx-2,-11);X.stroke();X.shadowBlur=0}
+  X.strokeStyle=INK;X.lineWidth=3;X.lineCap='round';X.beginPath();[-9,-3,5,11].forEach(function(lx){X.moveTo(lx,8);X.lineTo(lx,20)});X.stroke();
+  var C=[[-12,0,11],[0,-7,12],[12,0,11],[-5,6,10],[7,6,10]];
+  X.fillStyle=INK;C.forEach(function(c){X.beginPath();X.arc(c[0],c[1],c[2]+2,0,6.29);X.fill()});
+  X.fillStyle='#ffffff';X.shadowColor=TLC;X.shadowBlur=8;C.forEach(function(c){X.beginPath();X.arc(c[0],c[1],c[2],0,6.29);X.fill()});X.shadowBlur=0;
+  X.fillStyle=INK;X.beginPath();X.roundRect(12,-6,18,15,6);X.fill();
+  X.beginPath();X.ellipse(15,-9,5,3,-.6,0,6.29);X.fill();
+  X.fillStyle='#fff';X.beginPath();X.arc(24,-1,2.2,0,6.29);X.fill();X.fillStyle=PK;X.beginPath();X.arc(25,-1,1.1,0,6.29);X.fill();
+  X.restore();
 }
 /* 六角バッジ（敵・ボス共通） */
 function badge(x,y,r,ch,c,fl,rot,fs){
