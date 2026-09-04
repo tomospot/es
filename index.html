@@ -95,8 +95,8 @@ body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none
 #ts .ctl{display:flex;align-items:center;gap:10px;margin-bottom:12px}#ts .ctl button{font:inherit;font-weight:700;border:0;border-radius:999px;padding:9px 20px;cursor:pointer;background:var(--pk);color:#fff}#ts .ctl button.fx{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3)}
 #ts .ctl .tm{font-family:var(--nm);font-size:13px;color:rgba(255,255,255,.7);margin-left:auto}
 #ts .bar{height:4px;background:rgba(255,255,255,.15);border-radius:2px;margin-bottom:12px;overflow:hidden}#ts .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pk),var(--tl))}
-#ts .ly{flex:1;min-height:200px;max-height:52vh;overflow:auto;scrollbar-width:thin;padding:45% 8px;scroll-behavior:auto;text-align:center;-webkit-mask-image:linear-gradient(transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(transparent,#000 18%,#000 82%,transparent)}
-#ts .ly p{margin:0;padding:5px 0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.9)}#ts .ly p.gap{height:14px;padding:0}
+#ts .ly{flex:1;min-height:200px;max-height:52vh;overflow:auto;scrollbar-width:thin;padding:10px 8px;scroll-behavior:auto;text-align:center;-webkit-mask-image:linear-gradient(transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(transparent,#000 8%,#000 92%,transparent)}
+#ts .ly p{margin:0;padding:2px 0;font-size:16px;line-height:1.5;color:rgba(255,255,255,.9)}#ts .ly p.gap{height:10px;padding:0}
 #ts .x{position:absolute;top:12px;right:14px;background:none;border:0;color:rgba(255,255,255,.7);font-size:22px;cursor:pointer}#ts .x:hover{color:#fff}
 #ts .cr{font-size:12px;color:rgba(255,255,255,.6);margin:8px 0 0;text-align:center;background:none;border:0;padding:0}
 @media(max-width:560px){#ts{padding:10px}#ts .box{padding:18px 16px 14px}#ts .ly{max-height:46vh}#ts .ly p{font-size:15px}#ts-btn{right:62px;bottom:12px}}
@@ -360,7 +360,7 @@ function shade(kind){
     +'<div class="ctl"><span><kbd>←→↑↓</kbd>/<kbd>WASD</kbd> 移動</span><span><kbd>Space</kbd> 撃つ</span><span><kbd>X</kbd> ボム</span><span><kbd>C</kbd> 波動砲</span><span><kbd>L</kbd> 資料</span><span><kbd>M</kbd> 消音</span><span><kbd>Esc</kbd> 一時停止</span></div>'
     +'<p class="k"><b>波動砲</b>は各ステージ1回。ボスに照準が追従する必中ビームで、体力を60%削ります。<b>P</b> パワーアップ（10段階、MAXでファンネル）／<b>S</b> スピード／<b>B</b> ボム補充。やられるとパワーが1段階下がります。</p>'
     +'<p class="k">スマホは指でドラッグで移動、弾は自動。ボムと波動砲はHUDのボタンで。最終ステージは本戦タイムラインの一番下から自動で上へ進み、壊し切ると最終ボスが出ます。</p>'
-    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v60</p>';
+    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v62</p>';
   else if(kind==='pause')h='<h2>一時停止</h2><p>スコア <span class="n">'+G.score+'</span></p><button class="go" id="esg-go">続ける</button><button class="fx" id="esg-lgb">集めた資料</button><button class="fx" id="esg-no">やめてページを直す</button>';
   else if(kind==='over'){var st=G.phase==='boss'?'最終ボス戦':G.phase==='final'?'最終ステージ（ポータル侵入）':'ステージ '+(G.stage+1)+(G.boss?'のボス戦':'');
     h='<h2>'+(G.win?'完走お疲れ様でした':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。作るの大変だったので、プレイしてもらって何よりです。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
@@ -852,12 +852,15 @@ PL.addEventListener('click',function(){if(A.paused)A.play();else A.pause()});
 RE.addEventListener('click',function(){A.currentTime=0;A.play()});
 A.addEventListener('play',function(){PL.textContent='❚❚ 一時停止'});A.addEventListener('pause',function(){PL.textContent='▶ 再生'});
 LY.addEventListener('wheel',function(){hold=Date.now()+3000},{passive:true});LY.addEventListener('touchmove',function(){hold=Date.now()+3000},{passive:true});
+var lastT=0,lastAt=0,raf=0;
+function est(){var t=A.currentTime||0;if(!A.paused&&A.currentTime===lastT)return lastT+(performance.now()-lastAt)/1000;lastT=t;lastAt=performance.now();return t}
 function sync(){
-  var d=A.duration||0,t=A.currentTime||0;TM.textContent=fmt(t)+' / '+fmt(d);if(!d)return;BAR.style.width=(t/d*100)+'%';
+  var d=A.duration||0,t=est();TM.textContent=fmt(t)+' / '+fmt(d);if(!d)return;BAR.style.width=(t/d*100)+'%';
   var p=(t/d-LEAD)/(1-LEAD-TAIL);p=Math.max(0,Math.min(1,p));
   if(Date.now()>hold){LY.scrollTop=p*(LY.scrollHeight-LY.clientHeight)}
 }
-A.addEventListener('timeupdate',sync);A.addEventListener('loadedmetadata',sync);
+function loop(){sync();if(!A.paused)raf=requestAnimationFrame(loop)}
+A.addEventListener('play',function(){cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)});A.addEventListener('seeked',sync);A.addEventListener('loadedmetadata',sync);A.addEventListener('pause',sync);
 A.addEventListener('ended',function(){PL.textContent='▶ 再生'});
 })();
 </script></body></html>
