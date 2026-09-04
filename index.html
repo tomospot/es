@@ -1,0 +1,799 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Electric Sheep 2026 参加者ポータル</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--pk:#D6337A;--pkd:#A8225C;--pks:#FBE4EE;--tl:#2B9EA6;--tld:#1E7B82;--tls:#E1F3F4;--ink:#1B2340;--ink2:#4A5270;--ink3:#8A90A8;--ln:#E6E1E8;--pp:#FBF8FA;--wh:#fff;--nt:#14162B;--sun:#F2B84B;--suns:#FFF4DC;--jp:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;--nm:"Space Grotesk",var(--jp)}
+*{box-sizing:border-box}body{margin:0;font-family:var(--jp);color:var(--ink);background:var(--pp);line-height:1.8;font-size:16px}
+a{color:var(--pkd);text-underline-offset:3px}h1,h2,h3{line-height:1.35;margin:0;font-weight:700}h2{font-size:clamp(24px,3.2vw,32px);font-weight:900}h3{font-size:20px}p{margin:0 0 1em}ul,ol{margin:0 0 1em;padding-left:1.4em}li{margin:.25em 0}
+.num{font-family:var(--nm);font-weight:700}.wrap{max-width:1040px;margin:0 auto;padding:0 20px}.sm{font-size:14px;color:var(--ink2)}:focus-visible{outline:3px solid var(--tl);outline-offset:2px}
+.nav{position:sticky;top:0;z-index:5;background:rgba(251,248,250,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}.nav .wrap{display:flex;align-items:center;gap:8px;min-height:60px}
+.brand{font-family:var(--nm);font-weight:700;font-size:17px;color:var(--ink);text-decoration:none;white-space:nowrap}.brand:before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;background:linear-gradient(135deg,var(--pk),var(--tl))}
+.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}.menu a{text-decoration:none;color:var(--ink2);font-size:14px;font-weight:500;padding:8px 12px;border-radius:999px;white-space:nowrap}.menu a:hover{background:var(--pks)}.menu a[aria-current=page]{background:var(--ink);color:#fff}
+.page{display:none;padding:40px 0 72px;scroll-margin-top:64px}.page.on{display:block}.lead{color:var(--ink2);margin:6px 0 28px;max-width:48em}.sec{margin-top:40px}.sec h3{margin-bottom:12px;padding-left:14px;border-left:4px solid var(--pk)}.sec h3.t{border-color:var(--tl)}
+.hero{background:var(--nt);color:#fff;padding:56px 0 48px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 15% 0%,rgba(214,51,122,.35),transparent 60%),radial-gradient(600px 300px at 90% 100%,rgba(43,158,166,.35),transparent 60%)}.hero .wrap{position:relative}
+.wm img{display:block;width:min(100%,600px);height:auto;aspect-ratio:1202/440;object-fit:cover;background:#fff;border-radius:16px;box-shadow:0 0 40px rgba(255,95,162,.35)}.wm small{display:block;font-size:22px;letter-spacing:.1em;margin-top:18px;font-weight:500}.wm .num{font-size:15px;letter-spacing:0;color:rgba(255,255,255,.7);margin-left:12px}
+.theme{margin:26px 0 0;padding:16px 20px;border-left:3px solid var(--pk);background:rgba(255,255,255,.06);max-width:48em}.theme b{display:block;font-size:19px}.theme span{display:block;color:rgba(255,255,255,.78);font-size:14px;line-height:1.75}.theme .req{margin-top:8px;color:var(--sun);font-weight:700}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:30px}.facts div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:14px 16px}.facts small{display:block;font-size:12px;color:rgba(255,255,255,.65)}.facts b{font-size:20px;line-height:1.3}
+.cd{margin-top:26px;font-size:14px;color:rgba(255,255,255,.75)}.cd b{font-family:var(--nm);font-size:34px;color:#fff;margin:0 2px 0 6px}.cd .live{background:var(--pk);color:#fff;padding:2px 10px;border-radius:999px;font-weight:700}
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:36px}.quick a,.card{display:block;text-decoration:none;color:var(--ink);background:var(--wh);border:1px solid var(--ln);border-radius:14px;padding:16px 18px}.quick a:hover{border-color:var(--pk)}.quick b{display:block;font-size:17px}.quick span{font-size:13px;color:var(--ink2)}
+.nowbox{margin-top:28px;border:1px solid var(--tl);background:var(--tls);border-radius:14px;padding:14px 18px;display:none}.nowbox.on{display:block}.nowbox small{color:var(--tld);font-weight:700}.nowbox b{display:block;font-size:18px}
+.note{border-left:4px solid var(--sun);background:var(--suns);padding:12px 16px;border-radius:0 10px 10px 0;margin:14px 0}.note.p{border-color:var(--pk);background:var(--pks)}.note.t{border-color:var(--tl);background:var(--tls)}.note b{display:block}.note p{margin:0}
+.tabs{display:flex;gap:6px;border-bottom:2px solid var(--ln);margin-bottom:20px}.tabs button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:10px 16px;font:inherit;font-weight:700;color:var(--ink3);cursor:pointer}.tabs button[aria-selected=true]{color:var(--pkd);border-color:var(--pk)}.tabs .num{font-size:18px;margin-right:6px}.tp{display:none}.tp.on{display:block}
+.tl{list-style:none;padding:0;border-left:2px solid var(--ln);margin:0 0 0 72px}.tl>li{position:relative;padding:10px 0 18px 26px}.tl>li:before{content:"";position:absolute;left:-7px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--wh);border:3px solid var(--ink3)}.tl>.st:before{border-color:var(--pk);background:var(--pk)}.tl>.dv:before{border-color:var(--tl);background:var(--tl)}.tl>.rs:before{border-color:var(--ln);background:var(--ln)}
+.tl time{position:absolute;left:-98px;top:12px;width:66px;text-align:right;font-family:var(--nm);font-weight:700;font-size:15px;color:var(--ink2)}.tl time small{display:block;font-size:11px;font-weight:500;color:var(--ink3);line-height:1.2}
+.tl h4{margin:0;font-size:17px}.tl h4 i{font-style:normal;font-size:11px;padding:2px 8px;border-radius:999px;border:1px solid var(--ln);background:var(--wh);color:var(--ink2);margin-left:8px;vertical-align:2px}.tl h4 i.s{color:var(--pkd);border-color:var(--pk);background:var(--pks)}.tl h4 i.d{color:var(--tld);border-color:var(--tl);background:var(--tls)}
+.tl .do{margin:4px 0 0;color:var(--ink2);font-size:14.5px;max-width:44em}.tl .do ul{margin:4px 0 0;padding-left:1.2em}.tl .do li{margin:2px 0}
+.tl>.now{background:var(--tls);border-radius:0 10px 10px 0}.tl>.now:after{content:"いまここ";position:absolute;right:12px;top:12px;font-size:11px;font-weight:700;color:#fff;background:var(--tl);padding:2px 8px;border-radius:999px}
+.lg{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--ink2);margin-bottom:18px}.lg i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:8px 18px;margin:0}.kv dt{font-weight:700;color:var(--ink2);font-size:14px}.kv dd{margin:0}
+table{border-collapse:collapse;width:100%;font-size:15px;background:var(--wh);border-radius:12px;overflow:hidden;border:1px solid var(--ln)}th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--ln);vertical-align:top}th{background:#F3EEF2;font-size:13px;color:var(--ink2)}tr:last-child td{border-bottom:0}
+.done td{text-decoration:line-through;color:var(--ink3)}.done td:first-child:after{content:"終了";text-decoration:none;display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:var(--tld);background:var(--tls);padding:1px 7px;border-radius:999px}
+.ck{list-style:none;padding:0}.ck li{padding:10px 12px 10px 42px;position:relative;background:var(--wh);border:1px solid var(--ln);border-radius:10px;margin:6px 0}.ck li:before{content:"";position:absolute;left:12px;top:14px;width:18px;height:18px;border:2px solid var(--pk);border-radius:5px}.ck .m:before{background:var(--pk);box-shadow:inset 0 0 0 3px #fff}.ck small{display:block;color:var(--ink2);font-size:13px}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}.card{padding:20px 22px;margin:12px 0}.card .role{font-size:13px;color:var(--tld);font-weight:700}.card .name{font-size:22px;font-weight:900;margin-bottom:8px}.card .by{font-size:13px;color:var(--ink2)}.card .ttl{font-size:21px;font-weight:900;margin:2px 0 8px}.card .win{color:var(--pkd)}.card p{font-size:14.5px;color:var(--ink2);margin:0}.card .pz{margin-top:8px;padding:10px 14px;background:var(--pks);border-radius:10px}.card .pz b{color:var(--pkd)}.card .wn{font-size:13.5px;margin-top:6px}
+.pill{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}.pill li{background:var(--wh);border:1px solid var(--ln);border-radius:999px;padding:6px 14px;font-size:14px;margin:0}
+.teams{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}.teams li{background:var(--wh);border:1px solid var(--ln);border-radius:10px;padding:8px 12px;font-size:15px;margin:0}.teams .num{color:var(--pk);margin-right:8px;font-size:13px}
+details{background:var(--wh);border:1px solid var(--ln);border-radius:10px;padding:0 16px;margin:8px 0}summary{cursor:pointer;font-weight:700;padding:12px 0;list-style:none}summary::-webkit-details-marker{display:none}summary:before{content:"Q ";font-family:var(--nm);color:var(--pk)}details[open] summary{border-bottom:1px solid var(--ln)}details p{padding:12px 0 4px;margin:0;color:var(--ink2);font-size:15px}
+footer{border-top:1px solid var(--ln);padding:28px 0 40px;font-size:13px;color:var(--ink2)}footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}.btn{display:inline-block;background:var(--pk);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:999px;font-size:14px}
+@media(max-width:640px){.wrap{padding:0 14px}.hero{padding:34px 0 30px}.wm small{font-size:16px;margin-top:12px}.wm .num{display:block;margin:4px 0 0}.theme{padding:12px 14px;margin-top:18px}.theme b{font-size:16px}.facts{gap:10px;margin-top:20px}.facts b{font-size:17px}.cd b{font-size:24px}.quick{grid-template-columns:1fr;gap:8px;margin-top:22px}.quick a,.card{padding:14px 14px}.lead{margin-bottom:18px;font-size:15px}.tabs button{padding:8px 10px;font-size:14px}.tabs .num{font-size:15px}table{font-size:13.5px}td{padding:8px 8px}.name{font-size:19px}.ttl{font-size:18px}.teams{grid-template-columns:repeat(2,1fr)}.desk{grid-template-columns:1fr}.prof{grid-template-columns:1fr}.prof dl{grid-template-columns:1fr;gap:2px 0}.prof dd{margin-bottom:8px}.menu a{font-size:13px;padding:7px 10px}.brand{font-size:15px}.pill li{font-size:13px;padding:5px 11px}.ck li{padding:8px 10px 8px 38px}.ck li:before{top:11px;width:16px;height:16px}
+.tl{margin-left:56px}.tl time{left:-82px;width:54px;font-size:13px}.tl>li{padding-left:18px}.kv{grid-template-columns:1fr;gap:2px 0}.kv dd{margin-bottom:10px}}
+.name .kana{display:inline-block;margin-left:8px;font-size:12px;font-weight:500;opacity:.65;letter-spacing:.04em}
+.desk{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.desk .card{border-top:4px solid var(--pk)}.desk .card:nth-child(2){border-top-color:var(--tl)}.desk .card:nth-child(3){border-top-color:var(--sun)}
+.desk .co{font-size:13px;color:var(--ink2);font-weight:700}.desk .kind{font-size:19px;font-weight:900;margin:4px 0 6px}.desk p{margin:0;font-size:14.5px}
+.prof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.prof details.card{padding:0;margin:0;border-radius:14px}
+.prof details.card summary{padding:14px 44px 14px 18px;position:relative;list-style:none}
+.prof details.card summary:before{content:none}
+.prof details.card summary:after{content:"＋";position:absolute;right:16px;top:12px;font-family:var(--nm);font-size:20px;color:var(--pk)}
+.prof details.card[open] summary:after{content:"－"}
+.prof details.card[open] summary{border-bottom:1px solid var(--ln)}
+.prof .name{display:block;font-size:19px;font-weight:900;line-height:1.3}
+.prof .dept{display:block;font-size:12.5px;color:var(--ink2);margin-top:2px}
+.prof .tz{display:block;font-size:13px;color:var(--tld);margin-top:6px;font-weight:500}
+.prof .body{padding:12px 18px 16px}
+.prof dl{display:grid;grid-template-columns:5.5em 1fr;gap:6px 12px;margin:0;font-size:13.5px}.prof dt{font-weight:700;color:var(--tld)}.prof dd{margin:0}.prof dd li{margin:0 0 2px 1.1em}.prof ul{margin:0;padding:0}
+.prof .msg{margin-top:10px;padding:8px 12px;background:var(--pks);border-radius:10px;font-size:14px;font-weight:700}
+.prof .tba{grid-column:1/-1;display:flex;align-items:center;justify-content:center;min-height:72px;padding:16px 18px;color:var(--ink2);border-style:dashed;font-size:14px;text-align:center}
+.ck .sub{list-style:disc;padding-left:1.2em;margin:4px 0 0}.ck .sub li{background:none;border:0;padding:0;margin:0;font-size:13px;color:var(--ink2)}.ck .sub li:before{content:none}
+
+/* ===== Portal Shooter（隠しゲーム） ===== */
+#esg-btn{position:fixed;right:16px;bottom:16px;z-index:40;width:46px;height:46px;border-radius:50%;border:1px solid var(--ln);background:var(--wh);font-size:22px;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(27,35,64,.14);opacity:.8;transition:opacity .15s,transform .15s}
+#esg-btn:hover{opacity:1;border-color:var(--pk);transform:translateY(-2px)}
+#esg{position:fixed;inset:0;z-index:60;display:none;pointer-events:none}#esg.on{display:block}
+#esg canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+@media (pointer:coarse){#esg.on canvas{pointer-events:auto;touch-action:none}}
+#esg .hud{position:absolute;top:10px;right:12px;display:flex;gap:12px;align-items:center;background:rgba(20,22,43,.9);color:#fff;padding:6px 8px 6px 16px;border-radius:999px;font-family:var(--nm);font-weight:700;font-size:11px;letter-spacing:.06em;pointer-events:auto;box-shadow:0 6px 20px rgba(27,35,64,.25)}
+#esg .hud b{font-size:18px;margin-left:5px;letter-spacing:0}#esg .hud .lv{color:var(--pk);font-size:16px;letter-spacing:1px}
+#esg .hud #esg-wv.rdy{background:var(--pk)}#esg .hud #esg-wv b{font-size:11px}#esg .hud button b{font-size:14px;margin:0 1px}#esg .hud button{font:inherit;font-family:var(--jp);font-weight:700;font-size:12px;letter-spacing:0;border:0;border-radius:999px;padding:6px 12px;cursor:pointer;background:rgba(255,255,255,.14);color:#fff}#esg .hud button:hover{background:var(--pk)}#esg .hud #esg-q{padding:6px 10px}
+#esg .msg{position:absolute;left:50%;top:36%;transform:translate(-50%,-50%);text-align:center;color:#fff;opacity:0;transition:opacity .2s;text-shadow:0 2px 24px rgba(20,22,43,.9),0 0 2px rgba(20,22,43,.9);white-space:nowrap}
+#esg .msg.on{opacity:1}#esg .msg b{display:block;font-family:var(--nm);font-size:clamp(30px,6vw,52px);font-weight:700;line-height:1.1}#esg .msg span{font-size:14px;font-weight:700}
+#esg .sh{position:absolute;inset:0;background:rgba(20,22,43,.8);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px;pointer-events:auto}#esg .sh.on{display:flex}
+#esg .sh>div{max-width:520px}#esg .sh h2{font-family:var(--jp);font-size:clamp(30px,6vw,44px);color:#fff;margin-bottom:10px;letter-spacing:.02em}#esg .sh p{color:rgba(255,255,255,.82);font-size:14.5px;line-height:1.75;text-align:left}#esg .sh p.big,#esg .sh p.ver,#esg .sh p.k:last-of-type{text-align:center}#esg .sh p.ver{font-family:var(--nm);font-size:11px;color:rgba(255,255,255,.35);margin-top:14px}#esg .sh .ctl{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin:14px 0 10px;font-size:13px;color:rgba(255,255,255,.85)}#esg .sh .ctl span{white-space:nowrap}#esg .sh p.big{font-size:clamp(17px,3.2vw,22px);font-weight:700;color:var(--sun);line-height:1.5;margin:0 0 16px}#esg .sh p.k{font-size:13px;color:rgba(255,255,255,.7)}
+#esg .sh .n{font-family:var(--nm);font-size:64px;font-weight:700;line-height:1.1;color:var(--sun);margin:4px 0 10px}
+#esg .sh button{font:inherit;font-weight:700;padding:11px 24px;border-radius:999px;border:0;cursor:pointer;margin:8px 5px 0}
+#esg .sh .go{background:var(--pk);color:#fff}#esg .sh .go:hover{background:var(--pkd)}#esg .sh .fx{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+#esg .sh{overflow:auto}#esg .sh>div.wide{max-width:560px;margin:auto 0}
+#esg .sh .cap{display:flex;justify-content:space-between;align-items:center;font-family:var(--nm);font-size:13px;color:rgba(255,255,255,.75);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:8px;margin-bottom:12px}#esg .sh .cap b{font-size:22px;color:var(--sun);margin:0 2px}#esg .sh .cap i{font-style:normal;font-family:var(--jp);font-weight:700;font-size:12px;color:#fff;background:var(--pk);padding:2px 10px;border-radius:999px}
+#esg .sh h2.it{font-family:var(--jp);font-size:clamp(20px,4vw,26px);text-align:left}#esg .sh p.ib{text-align:left;font-size:15px;color:#fff;background:rgba(255,255,255,.08);border-left:3px solid var(--tl);padding:12px 16px;border-radius:0 10px 10px 0}#esg .sh p.ib b{color:var(--sun)}
+#esg .sh ol.dl{list-style:none;padding:0;margin:0 0 8px;text-align:left;max-height:56vh;overflow:auto}#esg .sh ol.dl li{display:grid;grid-template-columns:28px 1fr;gap:2px 10px;padding:8px 10px;border-radius:8px;margin:4px 0;background:rgba(255,255,255,.05);opacity:.55}#esg .sh ol.dl li.g{opacity:1;background:rgba(255,255,255,.1)}
+#esg .sh ol.dl .no{font-family:var(--nm);font-weight:700;color:var(--sun);grid-row:span 2;font-size:18px;line-height:1.3}#esg .sh ol.dl b{font-size:14.5px}#esg .sh ol.dl small{display:block;font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.6}#esg .sh ol.dl small b{color:var(--sun);font-size:12.5px}
+#esg.wave #esg-nx{display:none}
+@media(max-width:560px){#esg .hud{left:8px;right:8px;top:6px;flex-wrap:wrap;justify-content:center;gap:6px 10px;padding:6px 10px;border-radius:14px;font-size:10px}#esg .hud b{font-size:15px;margin-left:3px}#esg .hud .lv{font-size:14px}#esg .hud button{padding:5px 9px;font-size:11px}#esg .msg{top:44%}#esg .sh{padding:12px}#esg .sh>div{max-width:100%}#esg .sh h2{font-size:26px}#esg .sh p{font-size:13.5px}#esg .sh p.big{font-size:16px}#esg .sh .ctl{font-size:12px;gap:4px 10px}#esg .sh button{padding:10px 18px;font-size:14px}#esg .sh ol.dl{max-height:48vh}#esg-btn{right:12px;bottom:12px}}
+#esg kbd{font-family:var(--nm);background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:6px;padding:1px 7px;font-size:12px;margin:0 1px}
+body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none;scroll-behavior:auto}
+.esg-hit{animation:esg-shake .18s}@keyframes esg-shake{25%{transform:translate(-3px,1px) rotate(-.5deg)}75%{transform:translate(3px,-1px) rotate(.5deg)}}
+.esg-dmg{outline:2px dashed var(--pk);outline-offset:-2px;filter:saturate(.7) contrast(.92)}
+.esg-dmg2{outline:2px dashed var(--pkd);outline-offset:-2px;filter:saturate(.35) contrast(.85) blur(.4px)}
+.esg-dead{visibility:hidden!important}
+.esg-warn{outline:3px solid var(--pk)!important;outline-offset:2px;animation:esg-warn .18s infinite alternate}@keyframes esg-warn{from{box-shadow:0 0 0 0 rgba(214,51,122,.6)}to{box-shadow:0 0 0 8px rgba(214,51,122,0)}}
+</style></head><body>
+<header class="nav"><div class="wrap"><a class="brand" href="#home">Electric Sheep 2026</a><nav class="menu"><a href="#home">ホーム</a><a href="#timeline">本戦タイムライン</a><a href="#rules">ルール・審査</a><a href="#stay">宿泊・交通</a><a href="#judges">審査員・賞</a><a href="#support">サポートデスク</a><a href="#faq">FAQ</a></nav></div></header>
+<main>
+<section class="page" id="home" data-t="ホーム">
+<div class="hero"><div class="wrap">
+<h1 class="wm"><img src="https://storage.googleapis.com/studio-design-asset-files/projects/4BqN7bJear/s-1202x758_v-fms_webp_b097f3d2-d58c-45cf-96c3-ff11424802fd.png" alt="全国学生対抗SFハッカソン Electric Sheep 2026 Supported by 技育プロジェクト" width="1202" height="758"><small>参加者ポータル <span class="num">#メ〜テレハッカソン</span></small></h1>
+<div class="theme"><b>テーマ「100歳になった自分を幸せにするプロダクト」</b><span>人生100年時代。あなたが100歳になったとき、本当に欲しいものは何ですか？<br>100歳になった自分とは？　どんな世の中になっている？<br>寿命が伸びてまだまだ100歳なんて若いのかもしれない。未来の自分を幸せにするのは、今のあなたのアイデア。ここでしか味わえない「共創のワクワク」を全力で！</span><span class="req">ハードウェア連携は必須です。</span></div>
+<div class="facts"><div><small>本戦</small><b><span class="num">9.12</span> 土 – <span class="num">9.13</span> 日</b></div><div><small>会場</small><b>東別院テラスホール</b></div><div><small>開始時刻（両日）</small><b><span class="num">9:30</span> 受付 / <span class="num">10:00</span> 開始</b></div><div><small>優勝賞金</small><b class="num">30万円</b></div></div>
+<div class="cd" id="cd" aria-live="polite"></div>
+</div></div>
+<div class="wrap">
+<div class="nowbox" id="nb"><small>いま進行中のプログラム</small><b id="nw"></b><span class="sm" id="nd"></span></div>
+<div class="quick"><a href="#timeline"><b>本戦タイムライン</b><span>2日間の流れと、各時間帯でチームがやること</span></a><a href="#rules"><b>ルール・審査</b><span>審査基準、プレゼン形式、軍資金3万円、著作権</span></a><a href="#stay"><b>宿泊・交通</b><span>名鉄イン名古屋金山、交通費、会場アクセス</span></a><a href="#judges"><b>審査員・特別賞</b><span>審査員3名と、サポーター企業5社の特別賞</span></a><a href="#support"><b>サポートデスク</b><span>当日の3つのデスクの役割と、担当者プロフィール</span></a><a href="#faq"><b>FAQ</b><span>よくある質問</span></a></div>
+<div class="sec"><h3>本戦前に必ず確認</h3><ul class="ck">
+<li class="m"><strong>当日37℃を超える熱がある場合は参加できません</strong><small>運営・加藤まで事前に連絡してください。</small></li>
+<li class="m"><strong>持ち物</strong><small><ul class="sub"><li>発表に必要なもの（PC、ハードウェア、3Dプリンタなどの機材）</li><li>軍資金精算用の領収書と代表者の印鑑</li><li>懇親会での交流用の名刺（任意）</li></ul></small></li>
+<li class="m"><strong>交通費の領収書（愛知県外から参加の方）</strong><small>申請はキックオフの時と同じくGoogleフォームを使用します。</small></li>
+<li class="m"><strong>配布Tシャツ（2枚）を配布します</strong><small>開始までに着用してください。</small></li>
+<li class="m"><strong>素材の出典元・使用AIツールの一覧</strong><small>本戦の発表資料に必ず記載してください。</small></li>
+<li><strong>貴重品は各自で管理してください</strong><small>会場内でも席を離れるときは持ち歩いてください。</small></li>
+<li><strong>当日の食事</strong><small>Day1は昼ごはん・軽食・お菓子・水・お茶、Day2はお弁当・お菓子・水・お茶を用意します。懇親会では軽食とソフトドリンクが出ます。</small></li>
+</ul></div>
+<div class="sec"><h3 class="t">参加チーム（チーム紹介・リハーサルの順番）</h3><ol class="teams"><li><span class="num">01</span>MC-Shiva</li><li><span class="num">02</span>ドリーム</li><li><span class="num">03</span>100バス</li><li><span class="num">04</span>バグばっかバックパッカー</li><li><span class="num">05</span>ちらしすし～ず</li><li><span class="num">06</span>たきささえ</li><li><span class="num">07</span>ft_friends</li><li><span class="num">08</span>PROCRASTINATER</li><li><span class="num">09</span>O(N)</li><li><span class="num">10</span>printf("Hello,world!");</li></ol><p class="sm" style="margin-top:10px">最終プレゼンの発表順は、Day2 10:00に確定予定です。</p></div>
+</div></section>
+
+<section class="page" id="timeline" data-t="本戦タイムライン"><div class="wrap">
+<h2>本戦タイムライン</h2><p class="lead">各時間帯で「チームがやること」を書いています。番組用のカメラ取材が入りますのでご協力ください。</p>
+
+<div class="tabs" role="tablist"><button role="tab" aria-selected="true" aria-controls="d1" id="t1"><span class="num">9.12</span>Day 1 土曜日</button><button role="tab" aria-selected="false" aria-controls="d2" id="t2"><span class="num">9.13</span>Day 2 日曜日</button></div>
+<div class="tp on" id="d1" role="tabpanel"><ul class="tl" data-date="2026-09-12">
+<li class="rs" data-s="09:30" data-e="10:00"><time>9:30<small>受付</small></time><h4>受付・開発席セッティング</h4><p class="do">来場したら配布されたTシャツに着替えてください。開発席で電源とWi-Fiを確認し、10:00までにお手洗いを済ませておきましょう。37℃を超える熱がある方は参加できません。運営・加藤まで事前に連絡してください。</p></li>
+<li data-s="10:00" data-e="10:02"><time>10:00</time><h4>オープニング</h4><p class="do">司会はメ～テレアナウンサー 堂野浩久さん。</p></li>
+<li class="st" data-s="10:02" data-e="10:52"><time><small>続けて</small></time><h4>チーム紹介（チーム01から順に）</h4><div class="do">1チーム5分以内。チームの簡単な紹介とインタビューを行います。聞かれること：<ul><li>チーム名の由来</li><li>どこから来たか（大学・学科など）</li><li>チームの雰囲気</li><li>今日までの準備</li><li>意気込み</li></ul></div></li>
+<li data-s="10:52" data-e="10:56"><time><small>続けて</small></time><h4>サポーター企業の紹介</h4><p class="do">デンソー、アイシン、日鉄ソリューションズ中部の3社は会場後方に相談ブースあり。困ったことをどんどん相談を。</p></li>
+<li data-s="10:56" data-e="11:03"><time><small>続けて</small></time><h4>審査基準の説明・審査員紹介</h4><p class="do">審査員の田中章愛さんから「開発のポイント」のビデオメッセージがあります。この後の開発にどう活かすかを考えながら聞きましょう。</p></li>
+<li class="st" data-s="11:03" data-e="11:30"><time><small>〜11:30</small></time><h4>進捗共有タイム（チーム01から順に）</h4><p class="do">1チーム2分。「いま何を作っているか」「この土日で作り込むこと」「メンターやサポートデスクに相談したいこと」を共有。</p></li>
+<li class="dv" data-s="11:30" data-e="18:00"><time>11:30<small>〜18:00</small></time><h4>開発スタート</h4><div class="do"><ul><li>昼ごはん・軽食・お菓子・水・お茶を用意します。各自のタイミングでどうぞ（運営からアナウンスあり）</li><li>メンターが随時巡回。気軽に相談を</li><li><a href="#support">サポートデスク</a>（デンソー：ロジック系／日鉄ソリューションズ中部：ハード系／アイシン：ワクワクを形に）も活用</li><li>買い出しなどで外に出るチームは運営に一報</li></ul></div></li>
+<li class="st" data-s="18:00" data-e="20:00"><time>18:00<small>〜20:00</small></time><h4>リハーサル（チーム01から順に）</h4><p class="do">1チーム10分。ステージで発表用モニター・音声の接続と動きを確認。順番待ちの間は開発を続けてOK。</p></li>
+<li data-s="20:00" data-e="20:30"><time>20:00</time><h4>Day1 開発タイム終了 → 延長戦（任意）</h4><p class="do">20:30までは任意参加の延長戦（運営立ち会い）。退出する方は忘れ物にご注意を。</p></li>
+<li class="rs" data-s="20:30" data-e="20:31"><time>20:30</time><h4>完全退出</h4><p class="do">明日は9:30集合、10:00スタート、最終プレゼンは13:00からです。ホテルは名鉄イン名古屋金山（<a href="#stay">宿泊・交通</a>）。</p></li>
+</ul></div>
+<div class="tp" id="d2" role="tabpanel"><ul class="tl" data-date="2026-09-13">
+<li class="rs" data-s="09:30" data-e="10:00"><time>9:30<small>集合</small></time><h4>集合・開発席セッティング</h4><p class="do">電源・Wi-Fiを確認して10:00を待ちます。</p></li>
+<li data-s="10:00" data-e="10:02"><time>10:00</time><h4>Day2 オープニング</h4><p class="do">本日のスケジュール説明と発表順の確定（予定）の後、開発再開。</p></li>
+<li class="dv" data-s="10:02" data-e="12:00"><time><small>〜12:00</small></time><h4>開発・最終調整</h4><p class="do">発表資料に「素材の出典元」「使用AIツール」を記載してください。お弁当・お菓子・水・お茶を用意します。</p></li>
+<li class="st" data-s="12:00" data-e="13:00"><time>12:00</time><h4>開発終了</h4><p class="do">全員手を止めます。会場をプレゼン形式に転換します（休憩・お弁当）。</p></li>
+<li data-s="13:00" data-e="13:05"><time>13:00</time><h4>最終プレゼンテーション 開始</h4><p class="do">審査基準の再確認と審査員3名の紹介。</p></li>
+<li class="st" data-s="13:05" data-e="14:10"><time><small>続けて</small></time><h4>プレゼン前半（1〜5番目）</h4><p class="do">発表5分のあと、審査員との質疑応答。終わったら拍手を受けて自席へ。</p></li>
+<li class="rs" data-s="14:10" data-e="14:25"><time><small>続けて</small></time><h4>休憩（15分）</h4></li>
+<li class="st" data-s="14:25" data-e="15:30"><time><small>〜15:30</small></time><h4>プレゼン後半（6〜10番目）</h4><p class="do">前半と同じ形式。</p></li>
+<li class="rs" data-s="15:30" data-e="15:55"><time>15:30</time><h4>審査（審査員は別室へ）・休憩</h4></li>
+<li data-s="15:55" data-e="16:45"><time><small>〜16:45</small></time><h4>サポーター企業ライトニングトーク</h4><p class="do">サポーター企業6社が2日間の感想や企業紹介を各5分でお話しします。</p></li>
+<li class="st" data-s="16:45" data-e="17:06"><time>16:45</time><h4>結果発表：特別賞</h4></li>
+<li class="st" data-s="17:06" data-e="17:40"><time><small>続けて</small></time><h4>優勝発表・閉会式</h4><p class="do">優勝チームを発表（メダル＋賞金30万円）。審査員総評、メ～テレ プロデューサー挨拶のあと、参加者・サポーター企業・審査員全員でステージ上で集合写真。</p></li>
+<li class="rs" data-s="17:40" data-e="17:45"><time><small>続けて</small></time><h4>交流会準備</h4><p class="do">立食形式にするため、椅子を後ろのスペースへ運びます。大きな荷物は指定の机へ。</p></li>
+<li data-s="17:45" data-e="19:15"><time>17:45<small>〜19:15</small></time><h4>交流会</h4><p class="do">軽食とソフトドリンクあり。サポーター企業・審査員・メンターと直接話せる時間です。名刺交換の機会にもどうぞ。</p></li>
+</ul></div>
+<div class="note p"><b>当日の進行状況により時間が前後することがあります</b><p>会場のアナウンスを優先してください。</p></div>
+</div></section>
+
+<section class="page" id="rules" data-t="ルール・審査"><div class="wrap">
+<h2>ルール・審査</h2>
+<div class="sec"><h3>必須要件</h3><ul><li><strong>ハードウェア連携が必須</strong>です。</li><li>テーマ実現に対するメイン機能を最低限実装してください。プロダクトとして完成していなくても問題ありません。</li><li>本戦（9/12–13）は全日程参加が必須です。</li></ul></div>
+<div class="sec"><h3>審査基準（3つ）</h3><table><tr><th style="width:44%">基準</th><th>見られるポイント</th></tr><tr><td><strong>① アイデアの独自性と実現性</strong></td><td>テーマに対する未来予想やエンターテイメント性、課題解決のデザイン</td></tr><tr><td><strong>② 技術的な挑戦</strong></td><td>プロダクトの完成度、機能の実装度、UI/UX</td></tr><tr><td><strong>③ 偏愛・ロマン</strong></td><td>プロダクトへの愛、こだわり、本気度</td></tr></table><p class="sm" style="margin-top:12px">このほか、サポーター企業5社がそれぞれの視点で特別賞を選びます（<a href="#judges">審査員・賞</a>）。</p></div>
+<div class="sec"><h3>最終プレゼンテーションの形式</h3><dl class="kv"><dt>発表順</dt><dd>Day2 10:00 に確定予定</dd><dt>持ち時間</dt><dd>発表 <span class="num">5分</span> ＋ 質疑応答</dd><dt>リハーサル</dt><dd>Day1 18:00からチーム01から順に、1チーム10分。発表用モニター・音声の接続と動きを確認</dd><dt>発表資料に記載</dt><dd>素材の出典元（音楽・画像・フォントの入手元）と、使用したAIツール</dd></dl></div>
+<div class="sec"><h3>軍資金 3万円</h3><div class="note"><b>受け取りには「代表者の領収証」と「印鑑」が必要です</b><p>チームごとに軍資金3万円を、本戦（9月）に現金でお渡しします。代表者の方は印鑑を忘れずに持参し、領収証を記入してお渡しください。</p></div></div>
+<div class="sec"><h3>著作権・肖像権（放送があります）</h3><p>作品はテレビ放送（地上波）とYouTube配信で紹介されます。素材やツールのルールは必ず出典元の利用規約で確認してください。</p><ul><li><strong>本戦の発表資料に記載</strong>：素材の出典元（音楽・画像・フォントなどの入手元）と、使用したAIツール</li><li><strong>生成AIの「〇〇風」に注意</strong>：特定の作家・作品のスタイルを指定した生成（例「ジブリ風」「〇〇（作家名）風」）は避けてください。使用不可となる場合があります。</li><li>権利の出典が不明瞭な場合など、放送の都合で資料・制作物の修正をお願いすることがあります。</li></ul></div>
+<div class="sec"><h3 class="t">成果物の権利・SNS発信</h3><ul><li>参加者自らが創作・開発した成果物の知的財産権は<strong>参加者に帰属</strong>します。第三者の権利を侵害しないオリジナルであることを保証してください。</li><li>イベントの模様は撮影・収録され、番組やメ～テレの各種媒体で公開されます。</li><li>写真などのブログ・SNS掲載は原則OK。投稿にはハッシュタグ <strong>#メ〜テレハッカソン</strong> を。ただし番組としての魅力の維持や、提供技術の非公開情報の掲載は参加規約の秘密保持義務に基づき禁止です。</li></ul></div>
+</div></section>
+
+<section class="page" id="stay" data-t="宿泊・交通"><div class="wrap">
+<h2>宿泊・交通</h2><p class="lead">「県内／県外」の判定はサポーターズ登録の居住地に準じます。</p>
+<div class="sec"><h3>ホテル：名鉄イン名古屋金山</h3><dl class="kv"><dt>住所</dt><dd>〒460-0022 愛知県名古屋市中区金山一丁目11番7号</dd><dt>電話</dt><dd><a href="tel:0523243434">052-324-3434</a></dd><dt>アクセス</dt><dd>金山総合駅（JR・名鉄）北口から徒歩約4分／地下鉄「金山」駅 6番出口から徒歩約2分</dd><dt>チェックイン</dt><dd><span class="num">15:00</span>〜　／　チェックアウト <span class="num">10:00</span>まで</dd><dt>荷物</dt><dd>チェックイン前・チェックアウト後もフロントで預かってもらえます</dd><dt>公式サイト</dt><dd><a href="https://www.m-inn.com/kanayama/" target="_blank" rel="noopener">https://www.m-inn.com/kanayama/</a></dd></dl>
+<table style="margin-top:16px"><tr><th>参加区分</th><th>宿泊</th><th>チェックイン日</th></tr><tr><td>愛知県内から参加</td><td>1泊</td><td class="num">9/12（土）</td></tr><tr><td>愛知県外から参加</td><td>2泊（前泊あり）</td><td class="num">9/11（金）</td></tr></table>
+<div class="note"><b>前泊（9/11）の方へ</b><p>チェックインの案内はSlackでお知らせします。両日とも9:30受付ですので、ホテルから会場までは余裕をみて出発してください。宿泊の有無はキックオフアンケートの回答に基づいています。</p></div></div>
+<div class="sec"><h3>会場：東別院テラスホール</h3><dl class="kv"><dt>場所</dt><dd>真宗大谷派名古屋別院（東別院）内　名古屋市中区橘2-8-55</dd><dt>最寄駅</dt><dd>地下鉄名城線「東別院」駅 4番出口から徒歩約5分</dd><dt>ホテルから</dt><dd>地下鉄名城線で「金山」→「東別院」1駅（徒歩でも約15分）</dd><dt>開始時刻</dt><dd>両日とも <span class="num">9:30</span> 受付・<span class="num">10:00</span> 開始</dd><dt>公式サイト</dt><dd><a href="https://www.ohigashi.net/annai/hall/" target="_blank" rel="noopener">https://www.ohigashi.net/annai/hall/</a>（アクセス・館内案内）</dd></dl></div>
+<div class="sec"><h3 class="t">交通費の支給</h3><table><tr><th>参加区分</th><th>支給額</th><th>必要なもの</th></tr><tr><td>愛知県内から参加</td><td>一律 <span class="num">2,000円</span></td><td>—</td></tr><tr><td>愛知県外から参加</td><td>実費支給（上限 <span class="num">40,000円</span>）</td><td><strong>領収書の提出が必要</strong></td></tr></table><ul class="sm" style="margin-top:12px"><li>キックオフ・本戦それぞれ支給します。本戦分は10月中旬の予定。</li><li>本戦中の食費など諸費用の一部は参加者負担です。</li></ul></div>
+</div></section>
+
+<section class="page" id="judges" data-t="審査員・賞"><div class="wrap">
+<h2>審査員・賞</h2><p class="lead">すべてのチームに受賞のチャンスがあります。副賞の実施日程は今のうちに確保しておきましょう。</p>
+<div class="sec"><h3>審査員</h3><div class="ppl">
+<div class="card"><div class="role">XRディレクター・作り手プロデューサー</div><div class="name">岩﨑 謙汰 / イワケン</div><p>東京工業大学修了後、サイバーエージェントでVTuber・メタバース・XRなど3D系新規事業の立ち上げを歴任。Microsoft MVP。SIGGRAPH ASIAなど国際会議で登壇。若手向けコミュニティ「Iwaken Lab.」主宰。</p></div>
+<div class="card"><div class="role">エンジニア</div><div class="name">山河 絵利奈<span class="kana">やまかわ えりな</span></div><p>京都大学大学院情報学研究科修了。株式会社メドレーでWEB/アプリエンジニアとして従事。多数のハッカソンで優勝・企業賞を受賞し、ハッカソンやカンファレンスの運営にも携わる。</p></div>
+<div class="card"><div class="role">toio開発者｜魔改造の夜 Sニー総合リーダー</div><div class="name">田中 章愛<span class="kana">たなか あきちか</span></div><p>ソニーでロボット研究開発を経て、社内スタートアップとしてtoioを提案し商品化・事業化（第10回ロボット大賞文部科学大臣賞）。NHK「魔改造の夜」でチーム「Sニー」の総合リーダーとして世界新記録を達成。</p></div>
+</div></div>
+<div class="sec"><h3>優勝</h3><div class="card"><div class="ttl win">優勝メダル ＋ 賞金 30万円</div><p>審査基準①〜③をもとに審査員3名が選出。Day2の閉会式で発表します。</p></div></div>
+<div class="sec"><h3>特別賞（サポーター企業5社）</h3><p class="sm">Day2 16:45〜結果発表。プレゼンターは各社のご担当者です。</p>
+<div class="card"><div class="by">Presented by 株式会社デンソー</div><div class="ttl">Core Technology＆Communication賞</div><p>技術を論理的に突き詰め、自らの言葉で社会へ繋ぐ姿勢を評価。本質を射抜く技術力と発信力で未来を創り出すチームを表彰します。</p><p class="pz"><b>副賞</b>　「先端技術研究所」見学ツアー ＋ ギフト券10万円分</p><p class="wn">見学ツアーの日程・場所・交通費：調整中（受賞チーム決定後に案内）</p></div>
+<div class="card"><div class="by">Presented by 株式会社アイシン</div><div class="ttl">THE NEXT MOVE賞</div><p>皆さんの挑戦と熱い想いが新たな一歩となり「次の“動き”」をつくります。そんな「次の“動き”」を生み出したチームに贈る賞です。</p><p class="pz"><b>副賞</b>　アイシン試験場 特別見学会 ＆ チームアイシンとの共創ディスカッション ＋ スーパー耐久シリーズ第7戦＠富士スピードウェイ ペアチケット（5組10名） ＋ ギフト券10万円分</p><p class="wn"><span class="num">2026年10月14日（水）</span>　愛知県内で開催予定。交通・宿泊費は実費支給（合理的な交通手段・ルート・宿泊地の場合）。</p></div>
+<div class="card"><div class="by">Presented by 日鉄ソリューションズ中部株式会社</div><div class="ttl">ココロオドル賞</div><p>最も“ココロオドル挑戦”をしていたチームに贈る賞。困難にも前向きに挑み続け、変化と成長を楽しんでいた姿勢を評価します。</p><p class="pz"><b>副賞</b>　Amazonギフト券 10万円分</p></div>
+<div class="card"><div class="by">Presented by 公益財団法人 長寿科学振興財団</div><div class="ttl">Challenge長寿科学賞</div><p>100年後の自分と社会をつなぐ挑戦に贈る賞。長寿社会の課題解決に向けて、独創性と実現可能性を兼ね備えたアイデアに贈られます。</p><p class="pz"><b>副賞</b>　財団主催「AI・ロボティクスコンテスト シンポジウム」への特別観覧招待（最大5名まで旅費込）</p><p class="wn"><span class="num">2026年12月23日（水）</span>　渋谷会場。AI・ロボコンのファイナリストとつながる機会です。</p></div>
+<div class="card"><div class="by">Presented by 株式会社朋栄</div><div class="ttl">FOR-A One Team 賞</div><p>メンバー一人ひとりの強みや個性を活かし、一丸となって挑戦したチームに贈る賞。互いを尊重し支え合い、最大限のパフォーマンスを発揮したチームを称えます。</p><p class="pz"><b>副賞</b>　スターバックスカード 10万円分</p></div>
+<p class="sm">※ 各副賞の内容・日程は予定であり、変更となる場合があります。</p></div>
+<div class="sec"><h3 class="t">サポーター企業（協賛・協力）</h3><ul class="pill"><li>株式会社デンソー</li><li>株式会社アイシン</li><li>日鉄ソリューションズ中部株式会社</li><li>公益財団法人 長寿科学振興財団</li><li>株式会社朋栄</li><li>株式会社エディオン</li><li>STATION Ai株式会社</li></ul></div>
+</div></section>
+
+<section class="page" id="support" data-t="サポートデスク">
+<div class="wrap">
+<h2>サポートデスク</h2><p class="lead">本戦当日、会場にサポーター企業3社のサポートデスクを設置します。行き詰まったら、そのまま持ち込んで相談してください。</p>
+<div class="sec"><h3>3つのデスクと役割</h3><div class="desk">
+<a class="card" href="#desk-denso"><div class="co">デンソー</div><div class="kind">ロジック系サポート</div><p>技術に対する科学考証と、未来シナリオの描画に関する支援</p></a>
+<div class="card"><div class="co">日鉄ソリューションズ中部</div><div class="kind">ハード系サポート</div><p>マイコンやラズベリーパイ等の技術サポートなど</p></div>
+<div class="card"><div class="co">アイシン</div><div class="kind">ワクワクを形にするサポート</div><p>未来の体験や価値につながるアイディアを形にするサポート</p></div>
+</div></div>
+<div class="sec" id="desk-denso"><h3>デンソー デスクの担当者</h3><p class="sm">「この人と話してみたい」と思ったら、その話題から切り出してみてください。</p><div class="prof">
+<details class="card"><summary><span class="name">大矢 晃示</span><span class="dept">先端研企画室 BCI-Q課（Beyond Classical Initiative - Quantum）</span><span class="tz">半導体</span></summary><div class="body"><dl><dt>得意な技術</dt><dd><ul><li>半導体（SoC、ロジック半導体、アナログ半導体、MEMS）</li><li>量子コンピュータ、量子センサ、量子通信</li><li>ロケット・人工衛星（前職のIHI時代）</li></ul></dd><dt>関わった仕事</dt><dd><ul><li>車載半導体式圧力センサ（世界シェアNo.1）</li><li>量子最適化の研究（Nature Communications誌掲載）</li><li>はやぶさの再突入カプセル（世界初の惑星サンプルリターン成功）、イプシロンロケット</li></ul></dd><dt>学生時代</dt><dd><ul><li>大学祭実行委員会</li><li>学士：大気圏再突入時の高エンタルピー風洞の熱流束評価／修士：惑星探査機向けの展開メカニズム</li><li>超小型人工衛星の制作（ARLISSプロジェクト、ネバダ州で打ち上げ実験）</li></ul></dd><dt>趣味</dt><dd><ul><li>Maker Faire、ニコニコ技術部などに個人製作物を出展（完全自作ドローンなど）</li><li>ラーメンの食べ歩き（年150杯ペース）</li><li>ニューオーリンズスタイルのジャズバンド演奏。テナー／アルトサックス、トランペットにも挑戦中</li></ul></dd></dl><p class="msg">「未来は自分でつくるもの」</p></div></details>
+<details class="card"><summary><span class="name">小峰 重樹</span><span class="dept">先端技術研究所 先端研企画室</span><span class="tz">材料の電気・電子物性</span></summary><div class="body"><dl><dt>得意な技術</dt><dd><ul><li>材料の電気・電子物性（材料中の電子やイオンの動きを明らかにする分野）</li><li>機能性無機材料（リチウムイオン電池、燃料電池、太陽電池などの材料）</li><li>R&amp;Dマネジメント（研究開発戦略の立案、投資判断）</li></ul></dd><dt>関わった仕事</dt><dd><ul><li>燃料電池・車載用リチウムイオン電池と新規材料の開発。基礎研究〜製造〜営業まで幅広く</li><li>機能性無機材料で約20件の論文発表、国際会議での招待講演</li><li>研究所の戦略立案。セミナー講師や雑誌への寄稿も</li></ul></dd><dt>学生時代</dt><dd><ul><li>誘電体材料の電気・電子物性を研究し学位取得。目に見えない現象を想像する面白さ</li><li>「研究」という行為自体が好きで、現在は組織マネジメントや人文学・社会科学にも研究の枠を拡大中</li></ul></dd><dt>趣味</dt><dd><ul><li>ジョギングを続けて、好きなものを食べたり飲んだりできる体調をキープ。料理も趣味</li><li>転職が多く、履歴書を書くのと面接が趣味だった時期も</li></ul></dd></dl><p class="msg">「自分が作りたい未来、未来への期待、とにかく今ではない、これからの話をしたいです」</p></div></details>
+<details class="card"><summary><span class="name">情家 智也<span class="kana">じょうけ ともや</span></span><span class="dept">先端技術研究所 先端研企画室</span><span class="tz">半導体およびMEMS</span></summary><div class="body"><dl><dt>得意な技術</dt><dd><ul><li>半導体およびMEMS（半導体技術で小さなセンサやアクチュエータを作る技術。スマホなどあらゆる電子部品に搭載）</li><li>事業開発（研究所の技術の社会実装に挑戦中）</li></ul></dd><dt>関わった仕事</dt><dd><ul><li>新規材料、センサ、アクチュエータに関わる特許を多数取得（特許収入に期待中、とのこと）</li></ul></dd><dt>学生時代</dt><dd><ul><li>研究：超分子によるバイオセンサ（国際学会で発表。ムーアの法則を超えることに興味）</li><li>サークル：エレクトーン、サッカー（どちらも創設に関与、今も活動中）</li></ul></dd><dt>趣味</dt><dd><ul><li>エレクトーン、ドラムなど楽器演奏。社会人になってからも新しい楽器に挑戦</li><li>飲むこと、カラオケなど盛り上がること</li></ul></dd></dl><p class="msg">「熱い思いのアイデアを論理的に突き詰めたい方、社会実装に興味がある方はぜひお越しください！」</p></div></details>
+<details class="card"><summary><span class="name">神生 陽介</span><span class="dept">社会イノベーション事業開発統括部</span><span class="tz">パワーエレクトロニクスに関する電気・制御ソフトの設計開発</span></summary><div class="body"><dl><dt>得意な技術</dt><dd><ul><li>パワーエレクトロニクスに関する電気・制御ソフトの設計開発</li></ul></dd><dt>関わった仕事</dt><dd><ul><li>出力密度世界一のインバータ（電源）の試作機開発</li></ul></dd><dt>学生時代</dt><dd><ul><li>生産工程の生産性向上とメンテナンスの効率化（工程がマーブルマシンのように流れるのを楽しみながら）</li></ul></dd><dt>趣味</dt><dd><ul><li>ラフティング</li><li>子供の自由研究や工作のサポート</li></ul></dd></dl><p class="msg">「「できない、わからない」を楽しむ」</p></div></details>
+</div></div>
+<div class="sec"><h3>日鉄ソリューションズ中部・アイシンの担当者</h3><div class="prof"><div class="card tba">担当者プロフィールは準備中です。公開され次第ここに掲載します。</div></div></div>
+</div></section>
+<section class="page" id="faq" data-t="FAQ"><div class="wrap">
+<h2>FAQ</h2>
+<details><summary>当日、体調が悪い場合はどうすればいいですか？</summary><p>37℃を超える熱がある場合は参加できません。運営・加藤まで事前に連絡してください。</p></details>
+<details><summary>食事は出ますか？</summary><p>Day1は昼ごはん・軽食・お菓子・水・お茶、Day2はお弁当・お菓子・水・お茶を用意します。懇親会では軽食とソフトドリンクが出ます。</p></details>
+<details><summary>貴重品はどうすればいいですか？</summary><p>貴重品は各自で管理してください。席を離れるときは持ち歩いてください。</p></details>
+<details><summary>軍資金3万円はいつ、どうやって受け取れますか？</summary><p>本戦（9月）に現金でお渡しします。受け取りには代表者の領収証と印鑑が必要です。</p></details>
+<details><summary>宿泊はどうなっていますか？</summary><p>運営事務局が名鉄イン名古屋金山を手配しています。愛知県内から参加の方は9/12（土）から1泊、県外の方は9/11（金）から2泊。前泊のチェックイン案内はSlackで行います。</p></details>
+<details><summary>交通費は支給されますか？</summary><p>県内は一律2,000円、県外は40,000円を上限に実費支給（領収書の提出が必要）。本戦分は10月中旬の予定です。</p></details>
+<details><summary>Tシャツはもらえますか？</summary><p>公式Tシャツを2枚配布します。本戦当日はそのTシャツを着用してください。2枚あるのは記念用ではありませんw着替えてねｗ</p></details>
+<details><summary>写真などをSNSに載せてもいいですか？</summary><p>OK、大歓迎です！当日の結果についてもOA前に発信することを特に制限していません。ドンドンどうぞ！ハッシュタグは <strong>#メ〜テレハッカソン</strong>。</p></details>
+
+</div></section>
+</main>
+<footer><div class="wrap"><div>全国学生対抗SFハッカソン「Electric Sheep 2026」<br>主催：名古屋テレビ放送（メ～テレ）　Supported by 技育プロジェクト（株式会社サポーターズ）</div><div><a href="https://www.nagoyatv.com/hackathon-electricsheep/" target="_blank" rel="noopener">公式サイト</a>　<a href="#faq">FAQ</a></div></div></footer>
+<script>
+(function(){
+var P=document.querySelectorAll('.page'),L=document.querySelectorAll('.menu a'),T=document.querySelectorAll('.tabs button');
+function show(id){var el=document.getElementById(id);if(!el||!el.classList.contains('page')){id='home';el=document.getElementById(id)}
+P.forEach(function(p){p.classList.toggle('on',p.id===id)});L.forEach(function(a){a.setAttribute('aria-current',a.getAttribute('href')==='#'+id?'page':'false')});
+document.title=(id==='home'?'':el.getAttribute('data-t')+'｜')+'Electric Sheep 2026 参加者ポータル';setTimeout(function(){window.scrollTo(0,0)},0);
+if(id==='timeline'){var d=jst();if(d.getFullYear()===2026&&d.getMonth()===8&&d.getDate()===13)tab(T[1])}}
+function tab(b){T.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});document.querySelectorAll('.tp').forEach(function(p){p.classList.toggle('on',p.id===b.getAttribute('aria-controls'))})}
+T.forEach(function(b){b.addEventListener('click',function(){tab(b)})});
+function route(){show((location.hash||'#home').slice(1))}window.addEventListener('hashchange',route);route();
+function jst(){var n=new Date();return new Date(n.getTime()+(n.getTimezoneOffset()+540)*60000)}
+function mn(s){var a=s.split(':');return a[0]*60+ +a[1]}
+var S=new Date(2026,8,12,10,0,0),E=new Date(2026,8,13,19,15,0);
+var LS=new Date(2026,8,12,0,0,0),LE=new Date(2026,8,14,0,0,0);
+function tick(){var n=jst(),c=document.getElementById('cd'),df=S-n;
+if(n<LS){c.innerHTML='本戦開始まで<b>'+Math.floor(df/864e5)+'</b>日<b>'+Math.floor(df%864e5/36e5)+'</b>時間<b>'+Math.floor(df%36e5/6e4)+'</b>分<b>'+Math.floor(df%6e4/1e3)+'</b>秒　9/12（土）10:00 開始'}
+else if(n<LE){c.innerHTML='<span class="live">本戦開催中</span> '+(n.getDate()===12?'Day1':'Day2')+'　最新の進行は会場アナウンスを優先してください'}else{c.textContent='2日間おつかれさまでした。放送予定は運営からご案内します。'}
+var box=document.getElementById('nb');box.classList.remove('on');document.querySelectorAll('.tl>.now').forEach(function(l){l.classList.remove('now')});
+var ymd=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0'),list=document.querySelector('.tl[data-date="'+ymd+'"]');if(!list)return;
+var cur=n.getHours()*60+n.getMinutes();list.querySelectorAll('li[data-s]').forEach(function(l){if(cur>=mn(l.getAttribute('data-s'))&&cur<mn(l.getAttribute('data-e'))){l.classList.add('now');document.getElementById('nw').textContent=l.querySelector('h4').textContent;var d=l.querySelector('.do');document.getElementById('nd').textContent=d?d.textContent.trim().slice(0,90):'';box.classList.add('on')}})}
+tick();setInterval(tick,1000);
+})();
+</script>
+<button id="esg-btn" type="button" title="Portal Shooter（隠しゲーム）" aria-label="隠しゲームを遊ぶ">🚀</button>
+<div id="esg" aria-hidden="true"><canvas></canvas>
+<div class="hud"><span>STAGE<b id="esg-st">1</b></span><span>SCORE<b id="esg-sc">0</b></span><span>撃破<b id="esg-k">0</b></span><span>残り<b id="esg-t">0</b></span><span>POW<b id="esg-p">1</b></span><span class="lv" id="esg-lv">♥♥♥</span><button type="button" id="esg-bm" title="ボム (X)">ボム <b id="esg-b">2</b></button><button type="button" id="esg-wv" title="波動砲 (C)">波動砲 <b id="esg-w">READY</b></button><button type="button" id="esg-lg" title="集めた資料 (L)">資料 <b id="esg-i">0</b>/3</button><button type="button" id="esg-nx">次のページ ▸</button><button type="button" id="esg-q" title="一時停止 (Esc)">❚❚</button></div>
+<div class="msg" id="esg-msg"></div><div class="sh" id="esg-sh"></div></div>
+<script>
+/* ===== Portal Shooter — 「サポーターズ」編隊を抜け、ボスを倒し、最後にポータルのUIと戦う隠しゲーム ===== */
+(function(){
+'use strict';
+var ROOT=document.getElementById('esg'),CV=ROOT.querySelector('canvas'),X=CV.getContext('2d');
+var $=function(id){return document.getElementById(id)};
+var BTN=$('esg-btn'),SC=$('esg-sc'),KL=$('esg-k'),TL=$('esg-t'),LV=$('esg-lv'),IC=$('esg-i'),MSG=$('esg-msg'),SH=$('esg-sh'),STG=$('esg-st'),PW=$('esg-p'),BM=$('esg-b'),WV=$('esg-w');
+var W=0,H=0,DPR=1,run=false,paused=false,raf=0,last=0;
+var G;            // ゲーム状態
+var TG=[];        // 破壊対象（DOM要素）
+var keys={},touch=null,acc=0,mute=false,AC=null;
+var RM=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var PK='#D6337A',TLC='#2B9EA6',INK='#1B2340',SUN='#F2B84B';
+var JP='"Zen Kaku Gothic New","Hiragino Sans",sans-serif';
+
+/* 敵は「サポーターズ」の文字を1文字ずつ背負う。横一列の編隊は左から サ・ポ・ー・タ・ー・ズ と並ぶ */
+var CH='サポーターズ'.split('');
+var STAGES=[
+ {c:'#4C8DFF',cnt:12,boss:'sa'},{c:'#2B9EA6',cnt:16,boss:'po'},{c:'#8E5BD9',cnt:20,boss:'zu'}
+];
+/* ボス定義：ch 文字 / name / hp / c 色 / mv 動き方 / 攻撃間隔（aim 狙い撃ち, ring 弾幕, hom 誘導弾, wall 横一列, dash 突進, sp 子分） */
+var BOSSES={
+ sa:{ch:'サ',name:'赤いデカ「サ」',sec:6.5,c:RED,r:62,mv:'fast',aim:.6,ring:2.6,hom:2.4,dash:3.5,sc:6000},
+ po:{ch:'ポ',name:'デカ「ポ」',sec:9,c:'#2ECC71',r:72,mv:'fig8',aim:1.5,ring:3.2,hom:3,dive:4,sp:3.2,sc:8000},
+ na:{ch:'ー',name:'デカ「ー」',sec:12,c:'#F2B84B',r:70,mv:'sweep',aim:1.2,wall:2.4,hom:3,sc:10000},
+ ta:{ch:'タ',name:'デカ「タ」',sec:13,c:'#8E5BD9',r:66,mv:'blink',aim:.9,spiral:.12,hom:2.6,sc:12000},
+ zu:{ch:'ズ',name:'デカ「ズ」',sec:11,c:'#4C8DFF',r:76,mv:'fast',aim:.7,ring:2.2,hom:2,wall:3.4,dash:4,sp:3,sc:15000}
+};
+var MAXP=10,SPD=[440,440,500,560,620],RED='#E5322D',ORG='#FF8C42';
+/* 難易度係数：1面 0.55 → 5面 1.0。敵の発射間隔・弾速・ボスの手数に効く */
+function df(){return Math.min(1,.6+Math.max(0,G.stage)*.2)}
+var INFO=[
+ {p:'本戦の基本',t:'9/12（土）– 9/13（日）東別院テラスホール',b:'両日とも<b>9:30受付・10:00開始</b>。全日程参加必須。持ち物は<b>発表に必要な機材（PC・ハードウェア・3Dプリンタなど）</b>、<b>軍資金精算用の領収書と代表者の印鑑</b>、懇親会用の名刺（任意）。貴重品は各自で管理。来場したら<b>配布されたTシャツに着替え</b>てください。食事はDay1に昼ごはん・軽食、Day2にお弁当、懇親会は軽食とソフトドリンク。<b>当日37℃を超える熱がある場合は参加できません</b>（運営・加藤まで事前に連絡）。'},
+ {p:'2日間の流れ',t:'Day1：紹介→開発→リハ　Day2：12:00開発終了→13:00プレゼン→閉会式',b:'<b>Day1</b> 10:00 オープニング → チーム紹介（5分以内。チーム名の由来・出身・雰囲気・準備・意気込み）→ 進捗共有（2分）→ 11:30〜18:00 開発 → 18:00〜 リハーサル（10分）→ 20:30 完全退出。<br><b>Day2</b> 10:00 発表順の確定（予定）・開発再開 → 12:00 開発終了 → 13:00〜 最終プレゼン：前半5チーム → 休憩 → 後半5チーム（<b>発表5分＋質疑</b>）→ 16:45 特別賞 → <b>優勝発表・閉会式</b> → 17:45〜 交流会。'},
+ {p:'ルール・宿泊・連絡先',t:'審査基準3つ、発表資料の記載、ホテルと交通費',b:'審査は<b>① 独自性と実現性 ② 技術的な挑戦 ③ 偏愛・ロマン</b>。発表資料には<b>素材の出典元と使用AIツール</b>を必ず記載（「〇〇風」に注意）。ホテルは<b>名鉄イン名古屋金山</b>（県内は9/12から1泊、県外は9/11から2泊、IN 15:00／OUT 10:00）。交通費は県内一律2,000円、県外は実費（上限40,000円、領収書必須）。SNS発信は大歓迎、当日の結果もOA前に発信OK。ハッシュタグは <b>#メ〜テレハッカソン</b>。'}
+];
+var infoOpen=false,shadeBack=null,infoAt=0;
+var SEL='.brand,.menu a,.wm img,.wm small,.theme,.facts>div,.cd,.nowbox,.quick>a,.sec h3,.ck li,.teams li,h2,.lead,.lg span,.tabs button,.tl>li,.note,tr,.kv dt,.kv dd,.card,.pill li,details,.page p,.page li,footer a,footer div>div';
+var PAGES=['home','timeline','rules','stay','judges','support','faq'];
+/* 最終ステージで壊すページ：本戦タイムラインだけ */
+var FP=PAGES.indexOf('timeline')>=0?['timeline']:PAGES;
+
+/* ---------- 対象の収集（親子で重複しないように） ---------- */
+function collect(){
+  var els=Array.prototype.slice.call(document.querySelectorAll(SEL));
+  var set=new Set(els);
+  TG=els.filter(function(e){var p=e.parentElement;while(p){if(set.has(p))return false;p=p.parentElement}return true})
+        .map(function(e){return{el:e,hp:0,max:0,dead:false,r:null,warn:0}});
+}
+function restore(){
+  TG.forEach(function(t){t.el.classList.remove('esg-hit','esg-dmg','esg-dmg2','esg-dead','esg-warn');t.el.style.transition='';t.el.style.opacity='';t.el.style.transform='';t.hp=0;t.max=0;t.dead=false;t.r=null;t.warn=0});
+}
+
+/* ---------- 音（WebAudio、Mで消音） ---------- */
+function snd(type){
+  if(mute)return;
+  try{
+    if(!AC)AC=new (window.AudioContext||window.webkitAudioContext)();
+    if(AC.state==='suspended')AC.resume();
+    var t=AC.currentTime,g=AC.createGain();g.connect(AC.destination);
+    if(type==='shot'){var o=AC.createOscillator();o.type='square';o.frequency.setValueAtTime(880,t);o.frequency.exponentialRampToValueAtTime(330,t+.07);g.gain.setValueAtTime(.05,t);g.gain.exponentialRampToValueAtTime(.001,t+.08);o.connect(g);o.start(t);o.stop(t+.09)}
+    else if(type==='get'){[660,880,1320].forEach(function(fq,i){var o3=AC.createOscillator();o3.type='triangle';o3.frequency.value=fq;var g3=AC.createGain();g3.connect(AC.destination);g3.gain.setValueAtTime(.0001,t+i*.07);g3.gain.linearRampToValueAtTime(.08,t+i*.07+.02);g3.gain.exponentialRampToValueAtTime(.001,t+i*.07+.18);o3.connect(g3);o3.start(t+i*.07);o3.stop(t+i*.07+.2)})}
+    else if(type==='baa'){var o2=AC.createOscillator();o2.type='sawtooth';o2.frequency.setValueAtTime(220,t);o2.frequency.linearRampToValueAtTime(180,t+.18);g.gain.setValueAtTime(.06,t);g.gain.exponentialRampToValueAtTime(.001,t+.2);o2.connect(g);o2.start(t);o2.stop(t+.21)}
+    else{ /* hit / boom / ouch : ノイズ */
+      var len=type==='boom'?.35:.08,b=AC.createBuffer(1,AC.sampleRate*len,AC.sampleRate),d=b.getChannelData(0);
+      for(var i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*(1-i/d.length);
+      var s=AC.createBufferSource();s.buffer=b;var f=AC.createBiquadFilter();f.type='lowpass';f.frequency.value=type==='boom'?900:3000;
+      g.gain.value=type==='boom'?.25:type==='ouch'?.3:.08;s.connect(f);f.connect(g);s.start(t)}
+  }catch(e){}
+}
+
+
+/* ---------- 初期化 ---------- */
+function size(){DPR=Math.min(window.devicePixelRatio||1,2);W=window.innerWidth;H=window.innerHeight;CV.width=W*DPR;CV.height=H*DPR;X.setTransform(DPR,0,0,DPR,0,0)}
+function fresh(){
+  G={score:0,kills:0,lives:3,t:0,ship:{x:W/2,y:H-96,inv:0,cool:0},bul:[],en:[],q:[],bolt:[],pt:[],pw:[],boss:null,laser:null,
+     phase:'wave',stage:-1,stT:0,fade:.62,spawn:2,clr:{},over:false,win:false,msgT:0,msgPri:0,
+     got:[],infoT:0,lapT:0,visN:0,visIn:0,wave:1,waveT:0,waveTick:0,waveA:-Math.PI/2,pk:0,pow:2,spd:0,bomb:2,bombT:0,shield:false,adv:0,uiT:2.5,cleared:false,bitT:0};
+  ROOT.classList.add('wave');
+  updHud();
+}
+function updHud(){
+  SC.textContent=G.score;KL.textContent=G.kills;
+  LV.textContent='♥♥♥♥♥'.slice(0,G.lives)+'♡♡♡'.slice(0,Math.max(0,3-G.lives));IC.textContent=G.got.length;
+  STG.textContent=G.phase==='final'?'FINAL':G.phase==='boss'?'LAST':(G.stage<0?'1':String(G.stage+1));
+  PW.textContent=G.pow>=MAXP?'MAX':G.pow;BM.textContent=G.bomb;WV.textContent=G.wave?'READY':'—';WV.classList.toggle('rdy',!!G.wave);
+}
+function flash(html,ms,pri){pri=pri||0;if(G.msgT>0&&G.msgPri>pri)return;MSG.innerHTML=html;MSG.classList.add('on');G.msgT=(ms||1500)/1000;G.msgPri=pri}
+
+/* ---------- 画面 ---------- */
+function shade(kind){
+  var h='';
+  if(kind==='start')h='<h2>バレました？</h2><p class="big">100歳になっても<br>シューティングはしたいですよね？</p>'
+    +'<p>「サポーターズ」の文字を背負った敵編隊を撃ち抜く全3ステージ。各ステージの最後に<b>デカい「サ」「ポ」「ズ」</b>がボスとして立ちはだかり、倒すたびに本戦の資料が1枚手に入ります。突破した先の<b>最終ステージ</b>では、本戦タイムラインのページのUIが反撃してくるので撃ち壊しましょう。その先にはさらに……。壊したものは終了時に元通りになります。</p>'
+    +'<div class="ctl"><span><kbd>←→↑↓</kbd>/<kbd>WASD</kbd> 移動</span><span><kbd>Space</kbd> 撃つ</span><span><kbd>X</kbd> ボム</span><span><kbd>C</kbd> 波動砲</span><span><kbd>L</kbd> 資料</span><span><kbd>M</kbd> 消音</span><span><kbd>Esc</kbd> 一時停止</span></div>'
+    +'<p class="k"><b>波動砲</b>は各ステージ1回。ボスに照準が追従する必中ビームで、体力を60%削ります。<b>P</b> パワーアップ（10段階、MAXでファンネル）／<b>S</b> スピード／<b>B</b> ボム補充。やられるとパワーが1段階下がります。</p>'
+    +'<p class="k">スマホは指でドラッグで移動、弾は自動。ボムと波動砲はHUDのボタンで。最終ステージは本戦タイムラインの一番下から自動で上へ進み、壊し切ると最終ボスが出ます。</p>'
+    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v50</p>';
+  else if(kind==='pause')h='<h2>一時停止</h2><p>スコア <span class="n">'+G.score+'</span></p><button class="go" id="esg-go">続ける</button><button class="fx" id="esg-lgb">集めた資料</button><button class="fx" id="esg-no">やめてページを直す</button>';
+  else if(kind==='over'){var st=G.phase==='boss'?'最終ボス戦':G.phase==='final'?'最終ステージ（ポータル侵入）':'ステージ '+(G.stage+1)+(G.boss?'のボス戦':'');
+    h='<h2>'+(G.win?'ポータル制圧完了':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。ポータルは無事……ではありません。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
+  else if(kind==='info'){var it=INFO[G.got[G.got.length-1]],bn=G.got.length;
+    h='<div class="cap"><span>資料 <b>'+bn+'</b>/'+INFO.length+'</span><i>'+it.p+'</i></div><h2 class="it">'+it.t+'</h2><p class="ib">'+it.b+'</p>'
+     +'<p class="k">'+powText(bn-1)+'</p><button class="go" id="esg-go">了解、続ける <kbd>Space</kbd></button><button class="fx" id="esg-lgb">集めた資料</button>'}
+  else if(kind==='log'){h='<h2>集めた資料</h2><p class="k">ボスを1体倒すごとに1枚。本戦の流れの順番に並んでいます。</p><ol class="dl">';
+    INFO.forEach(function(it,i){var g=G.got.indexOf(i)>=0;h+='<li class="'+(g?'g':'')+'"><span class="no">'+(i+1)+'</span>'+(g?'<b>'+it.t+'</b><small>'+it.b+'</small>':'<b>？？？</b><small>未取得（'+it.p+'）— '+(i+1)+'体目のボスを倒すと開く</small>')+'</li>'});
+    h+='</ol><button class="go" id="esg-go">戻る</button>'}
+  SH.innerHTML='<div'+(kind==='log'?' class="wide"':'')+'>'+h+'</div>';SH.classList.add('on');SH.scrollTop=0;
+  infoOpen=(kind==='info');if(infoOpen){infoAt=performance.now();keys={}}
+  $('esg-go').onclick=function(){if(kind==='pause'||kind==='info'){resume()}else if(kind==='log'){shade(shadeBack||'pause')}else{restore();fresh();play()}};
+  if($('esg-no'))$('esg-no').onclick=quit;
+  if($('esg-lgb'))$('esg-lgb').onclick=function(){shadeBack=kind;shade('log')};
+  $('esg-go').focus();
+}
+function open(){ROOT.classList.add('on');ROOT.setAttribute('aria-hidden','false');document.body.classList.add('esg-play');size();collect();fresh();shade('start');snd('shot')}
+function play(){SH.classList.remove('on');run=true;paused=false;last=performance.now();cancelAnimationFrame(raf);raf=requestAnimationFrame(loop);if(G.stage<0)nextStage()}
+function pause(){if(!run||G.over)return;paused=true;run=false;shade('pause')}
+function resume(){SH.classList.remove('on');infoOpen=false;if(G.over){shade('over');return}run=true;paused=false;last=performance.now();cancelAnimationFrame(raf);raf=requestAnimationFrame(loop)}
+function quit(){run=false;paused=false;cancelAnimationFrame(raf);restore();ROOT.classList.remove('on','wave');ROOT.setAttribute('aria-hidden','true');document.body.classList.remove('esg-play');SH.classList.remove('on');MSG.classList.remove('on');X.clearRect(0,0,W,H);BTN.focus()}
+function gameover(win){G.over=true;G.win=!!win;run=false;setTimeout(function(){shade('over')},win?1400:700)}
+function powText(i){var a=['パワーアップ','シールド 1回分'];if(i>=1)a.push('1UP');return 'ボーナス：+1000 ＋ '+a.join(' ＋ ')}
+function powerUp(){if(G.pow<MAXP){G.pow++;if(G.pow===MAXP){flash('<b>MAX POWER</b><span>ファンネル展開・誘導弾</span>',1400,1);snd('get')}else flash('<b>POWER '+G.pow+'</b><span>'+(PDM[G.pow-1]>PDM[G.pow-2]?'威力アップ':PD[G.pow-1]>PD[G.pow-2]?'斜め弾追加':'弾数アップ')+'</span>',600,1)}else{G.score+=500;flash('<b>+500</b>',400)}}
+function giveInfo(){
+  var i=G.got.length;if(i>=INFO.length)return;G.got.push(i);G.score+=1000;snd('get');
+  powerUp();G.shield=true;if(i>=1)G.lives=Math.min(5,G.lives+1);
+  updHud();run=false;paused=true;shade('info');
+}
+function getPw(p){
+  snd('get');spark(p.x,p.y,p.k==='P'?PK:p.k==='S'?TLC:SUN,12);
+  if(p.k==='P')powerUp();else if(p.k==='S'){if(G.spd<4){G.spd++;flash('<b>SPEED UP</b>',600,1)}else{G.score+=300;flash('<b>+300</b>',400)}}
+  else{if(G.bomb<3){G.bomb++;flash('<b>BOMB +1</b>',600,1)}else{G.score+=300;flash('<b>+300</b>',400)}}
+  updHud();
+}
+/* 波動砲：ステージごとに1回。ボス（いなければ一番近い敵）に自動で照準が追従する必中ビーム。ボスは最大HPの60%を失う */
+function useWave(){
+  if(!run||!G.wave||G.waveT>0)return;G.wave=0;G.waveT=1.4;G.waveTick=0;G.waveA=-Math.PI/2;snd('boom');flash('<b>波動砲</b><span>ロックオン</span>',900,1);updHud();
+}
+function waveTarget(){
+  var S=G.ship;
+  if(G.boss&&!G.boss.dying&&G.boss.y>0)return{x:G.boss.x,y:G.boss.y};
+  var t=nearestTarget(S.x,S.y);return t?{x:t.x,y:t.y}:{x:S.x,y:-100};
+}
+function updWave(dt){
+  var S=G.ship,hw=40,tg=waveTarget();G.waveT-=dt;G.waveTick-=dt;
+  /* 照準は目標へ滑らかに追従（ほぼ即追従なので外れない） */
+  var want=Math.atan2(tg.y-S.y,tg.x-S.x),d=want-G.waveA;while(d>Math.PI)d-=Math.PI*2;while(d<-Math.PI)d+=Math.PI*2;G.waveA+=d*Math.min(1,dt*14);
+  var ax=Math.cos(G.waveA),ay=Math.sin(G.waveA);
+  function inBeam(x,y,r){var px=x-S.x,py=y-S.y,along=px*ax+py*ay;if(along<0)return false;var off=Math.abs(px*ay-py*ax);return off<hw+(r||0)}
+  for(var i=G.en.length-1;i>=0;i--){var e=G.en[i];if(inBeam(e.x,e.y,20)){G.en.splice(i,1);G.kills++;G.score+=150;boom(e.x,e.y,e.c,'#fff',14);drop(e.x,e.y)}}
+  for(i=G.bolt.length-1;i>=0;i--){var o=G.bolt[i];if(inBeam(o.x,o.y,6))G.bolt.splice(i,1)}
+  if(G.boss&&!G.boss.dying&&G.boss.y>0){var b=G.boss,alive=b.parts.filter(function(p){return p.hp>0}),k=.6/1.4*dt;
+    /* ロックオン中は位置に関係なく必中 */
+    alive.forEach(function(p){p.hp-=p.max*k;p.flash=.1;if(p.hp<=0){p.hp=0;G.kills++;G.score+=800;boom(p.x,p.y,SUN,'#fff',26);G.pw.push({k:'P',x:p.x,y:p.y,t:0})}});
+    if(!alive.length){b.hp-=b.max*k;b.flash=.1;G.score+=1;if(b.hp<=0)hurtBoss(b,0,b.x,b.y)}
+    else if(b.kind!=='core'){b.hp-=b.max*k;b.flash=.1}
+    if(!b.guard&&Math.random()<dt*30)spark(tg.x+(Math.random()-.5)*b.r,tg.y+(Math.random()-.5)*b.r,'#fff',3);}
+  if(G.phase==='final'&&G.waveTick<=0){G.waveTick=.09;TG.forEach(function(t){if(t.r&&!t.dead&&inBeam(t.r.left+t.r.width/2,t.r.top+t.r.height/2,Math.max(t.r.width,t.r.height)/2))damage(t,t.r.left+t.r.width/2,t.r.top+t.r.height/2)})}
+  if(Math.random()<dt*40){var L=Math.random()*Math.hypot(tg.x-S.x,tg.y-S.y);G.pt.push({x:S.x+ax*L+(Math.random()-.5)*hw*2,y:S.y+ay*L,vx:(Math.random()-.5)*300,vy:-100-Math.random()*300,g:0,t:.3,w:4,h:12,c:Math.random()<.5?'#fff':PK,a:0,va:0})}
+}
+function useBomb(){
+  if(!run||G.bomb<=0||G.bombT>0)return;G.bomb--;G.bombT=.6;snd('boom');updHud();
+  G.bolt=[];G.laser=null;
+  for(var i=G.en.length-1;i>=0;i--){var e=G.en[i];boom(e.x,e.y,e.c,'#fff',14);G.en.splice(i,1);G.kills++;G.score+=150}
+  if(G.boss){G.boss.parts.forEach(function(p){if(p.hp>0){p.hp-=4;p.flash=.2;if(p.hp<=0){G.kills++;G.score+=800;boom(p.x,p.y,SUN,'#fff',20)}}});if(!G.boss.parts.length||G.boss.parts.every(function(p){return p.hp<=0}))hurtBoss(G.boss,12,G.boss.x,G.boss.y)}
+  if(G.phase==='final')TG.forEach(function(t){if(t.r&&t.r.top<H&&t.r.bottom>0)for(var k=0;k<2&&!t.dead;k++)damage(t,t.r.left+t.r.width/2,t.r.top+t.r.height/2)});
+  for(var j=0;j<40;j++)G.pt.push({x:W/2,y:H/2,vx:(Math.random()-.5)*1400,vy:(Math.random()-.5)*1000,g:0,t:.5+Math.random()*.4,w:6,h:6,c:Math.random()<.5?PK:SUN,a:0,va:0});
+  flash('<b>BOMB</b>',500,1);
+}
+
+/* ---------- ステージ進行 ---------- */
+function nextStage(){
+  G.stage++;G.stT=0;G.en=[];G.q=[];G.bolt=[];G.cleared=false;G.bossDone=false;G.adv=0;G.boss=null;G.wave=1;G.waveT=0;
+  if(G.stage>=STAGES.length){startFinal();return}
+  var s=STAGES[G.stage],n=s.cnt,k=0;
+  var row=6,snk=Math.floor((n-6)*.6),dv=n-row-snk;
+  for(k=0;k<row;k++)G.q.push({at:.6+k*.12,pat:'row',ci:k,bx:W/2+(k-(row-1)/2)*Math.min(70,(W-80)/row),y:-40-k*4,off:k*.6});
+  for(k=0;k<snk;k++)G.q.push({at:3.5+k*.45,pat:'snake',dir:G.stage%2?-1:1,by:70+(k%3)*36});
+  for(k=0;k<dv;k++)G.q.push({at:7+k*1.1,pat:'dive'});
+  flash('<b style="color:'+s.c+'">STAGE '+(G.stage+1)+'</b><span>サポーターズ編隊 '+n+' 体、そしてデカ「'+BOSSES[s.boss].ch+'」</span>',2000,2);snd('get');
+  updHud();
+}
+function startFinal(){
+  G.phase='final';ROOT.classList.remove('wave');G.spawn=2;G.uiT=3;G.wave=1;G.waveT=0;
+  flash('<b>FINAL STAGE</b><span>本戦タイムラインのUIが反撃してくる。撃ち壊せ</span>',3000,3);snd('boom');
+  if(location.hash!=='#'+FP[0])location.hash=FP[0];toBottom();
+  updHud();
+}
+function startLast(){
+  G.phase='boss';G.en=[];G.q=[];G.bolt=[];G.pw=[];G.wave=1;G.waveT=0;window.scrollTo(0,0);
+  spawnBoss('core');flash('<b>LAST BOSS</b><span>サポーターズ・コア出現</span>',3000,3);snd('boom');updHud();
+}
+function spawnEnemy(spec){
+  var s=G.phase==='wave'?STAGES[G.stage]:{c:G.phase==='boss'?'#8E5BD9':INK},e={ch:spec.ci!=null?CH[spec.ci]:CH[Math.floor(Math.random()*CH.length)],c:s.c,hp:2,pat:spec.pat,t:0,ft:(2+Math.random()*3)/df(),flash:0,bx:0,by:0,dir:1};
+  if(spec.pat==='row'){e.bx=spec.bx;e.x=spec.bx;e.y=spec.y;e.off=spec.off}
+  else if(spec.pat==='snake'){e.dir=spec.dir;e.by=spec.by;e.x=e.dir>0?-30:W+30;e.y=spec.by}
+  else{e.x=spec.x!=null?spec.x:40+Math.random()*(W-80);e.y=-30;e.vy=(120+Math.random()*80)*df()}
+  G.en.push(e);
+}
+
+/* ---------- ボス ---------- */
+function spawnBoss(kind){
+  var b={kind:kind,t:0,x:W/2,y:-120,ty:140,flash:0,dash:0,parts:[],entered:false,tx:W/2,mv:0,tm:{},sa:0};
+  if(kind==='core'){b.ch='';b.name='サポーターズ・コア';b.r=48;b.hp=b.max=Math.round(hps()*9.5);b.c=PK;b.sc=20000;b.ty=190;b.rot=0;b.at=2;b.at2=5;b.hm=2.5;
+    for(var i=0;i<6;i++)b.parts.push({ch:CH[i],a:i*Math.PI/3,hp:Math.round(hps()*1.2),max:Math.round(hps()*1.2),flash:0,ft:2+i*.7,x:0,y:0})}
+  else{var d=BOSSES[kind];b.ch=d.ch;b.name=d.name;b.r=d.r;b.hp=b.max=Math.max(120,Math.round(hps()*d.sec));b.c=d.c;b.sc=d.sc;b.def=d;
+    ['aim','ring','hom','wall','dash','dive','sp','spiral'].forEach(function(k){if(d[k])b.tm[k]=d[k]*(k==='aim'?1.5:1)})}
+  G.boss=b;
+}
+function hurtBoss(b,d,x,y){
+  if(b.dying)return;
+  b.hp-=d;b.flash=.1;spark(x,y,b.c,6);G.score+=10;b.hp=Math.max(0,b.hp);
+  if(b.hp<=0){b.hp=0;b.dying=1.6;b.dyT=0;G.bolt=[];G.laser=null;snd('boom');flash('<b style="color:'+b.c+'">BOSS DOWN</b>',1500,2)}
+}
+/* 撃破演出（1.6秒）：爆発が連鎖してから消える */
+function bossDeath(b,dt){
+  b.dying-=dt;b.dyT-=dt;b.flash=.1;
+  if(b.dyT<=0){b.dyT=.13;boom(b.x+(Math.random()-.5)*b.r*1.8,b.y+(Math.random()-.5)*b.r*1.4,Math.random()<.5?b.c:'#fff',SUN,18);snd('hit')}
+  if(b.dying<=0){G.boss=null;G.kills++;G.score+=b.sc;snd('boom');
+    boom(b.x,b.y,b.c,SUN,60);boom(b.x,b.y,'#fff',b.c,40);
+    for(var i=0;i<3;i++)G.pw.push({k:['P','P','S','B'][Math.floor(Math.random()*4)],x:b.x+(i-1)*44,y:b.y,t:i*.5});
+    if(b.kind==='core'){flash('<b>ポータル制圧完了</b>',3000,3);G.score+=5000;updHud();gameover(true)}
+    else{flash('<b>BOSS 撃破 +'+b.sc+'</b><span>資料を回収した</span>',1500,2);if(G.got.length<INFO.length)G.infoT=1.1}
+    updHud();
+  }
+}
+function aimed(x,y,sp,n,spread,c){var dx=G.ship.x-x,dy=G.ship.y-y,a0=Math.atan2(dy,dx);for(var i=0;i<n;i++){var a=a0+(i-(n-1)/2)*spread;G.bolt.push({x:x,y:y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,t:0,c:c})}}
+function ring(x,y,sp,n,c,off){for(var i=0;i<n;i++){var a=(off||0)+i*Math.PI*2/n;G.bolt.push({x:x,y:y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,t:0,c:c})}}
+function updBoss(b,dt){
+  var S=G.ship;b.t+=dt;if(b.flash>0)b.flash-=dt;
+  if(b.dying){bossDeath(b,dt);return}
+  if(!b.entered){b.y+=90*dt;if(b.y>=b.ty){b.entered=true;b.guard=.8}return}
+  if(b.guard>0)b.guard-=dt;
+  var ph=b.hp/b.max;
+  if(b.kind!=='core'){
+    var d=b.def,fast=ph<.4&&G.stage>=1,T=b.tm,D=df(),hard=G.stage>=2;
+    /* 動き */
+    if(b.dash>0){b.dash-=dt;b.x+=b.dx*dt;b.y+=b.dy*dt;if(b.dash<=0)b.ty2=b.ty}
+    else if(d.mv==='fast'){b.mv-=dt;if(b.mv<=0){b.mv=.45+Math.random()*.4;b.tx=60+Math.random()*(W-120);b.ty2=110+Math.random()*(fast?200:120)}var k=Math.min(1,dt*(5+4*D));b.x+=(b.tx-b.x)*k;b.y+=((b.ty2||b.ty)-b.y)*k}
+    else if(d.mv==='fig8'){b.x=W/2+Math.sin(b.t*.9)*(W*.34);b.y=b.ty+Math.sin(b.t*1.8)*30}
+    else if(d.mv==='sweep'){b.x=W/2+Math.sin(b.t*(fast?1.6:1.1))*(W/2-b.r-10);b.y=b.ty+Math.cos(b.t*.7)*40}
+    else if(d.mv==='blink'){b.mv-=dt;if(b.mv<=0){b.mv=fast?.8:1.3;spark(b.x,b.y,b.c,18);b.x=70+Math.random()*(W-140);b.y=100+Math.random()*(fast?220:140);spark(b.x,b.y,'#fff',18);snd('hit')}}
+    b.x=Math.max(50,Math.min(W-50,b.x));b.y=Math.max(90,Math.min(H-170,b.y));
+    /* 攻撃 */
+    for(var key in T){T[key]-=dt;if(T[key]>0)continue;var iv=d[key]*(fast?.75:1)/D*(key==='aim'?1.3:1);T[key]=iv;
+      if(key==='aim'){aimed(b.x,b.y+40,(180+(fast?40:0))*D+50,hard?(fast?5:3):(fast?3:1),.26,b.c);snd('hit')}
+      else if(key==='ring'){ring(b.x,b.y,120+60*D,hard?(fast?16:12):8,b.c,b.t*2);if(hard&&fast)ring(b.x,b.y,120,8,SUN,b.t*2+.2)}
+      else if(key==='hom'){var hn=hard?(fast?3:2):(G.stage>=1?(fast?2:1):1);for(var hi=0;hi<hn;hi++)homingBolt(b.x+(hi-(hn-1)/2)*60,b.y+20,ORG,140+50*D);snd('baa')}
+      else if(key==='wall'){var gap=Math.floor(Math.random()*7);for(var wi=0;wi<8;wi++){if(wi===gap||wi===gap+1)continue;G.bolt.push({x:40+wi*(W-80)/7,y:b.y+30,vx:0,vy:130+60*D,t:0,c:b.c})}flash('<b>壁</b><span>隙間をくぐれ</span>',700,1);snd('baa')}
+      else if(key==='spiral'){b.sa+=.55;var sp0=fast?2:1;for(var si=0;si<sp0;si++){var a2=b.sa+si*Math.PI;G.bolt.push({x:b.x,y:b.y,vx:Math.cos(a2)*170,vy:Math.sin(a2)*170,t:0,c:b.c})}}
+      else if(key==='dash'&&b.dash<=0){var ddx=S.x-b.x,ddy=S.y-b.y,LL=Math.hypot(ddx,ddy)||1;b.dash=.5;b.dx=ddx/LL*(700+400*D);b.dy=ddy/LL*(700+400*D);flash('<b style="color:'+b.c+'">突進</b>',500,1);snd('baa')}
+      else if(key==='dive'&&b.dash<=0){b.dash=1.2;b.dx=0;b.dy=420;setTimeout(function(){if(G.boss===b)b.dy=-420},600)}
+      else if(key==='sp'){for(var si2=0;si2<2;si2++)spawnEnemy({pat:si2?'snake':'dive',dir:Math.random()<.5?1:-1,by:110,x:b.x+(si2?60:-60)})}
+    }
+  }else{ /* サポーターズ・コア：6文字が周回。全部落とすとコアが露出してレーザー */
+    var alive=b.parts.filter(function(p){return p.hp>0}),R=Math.min(150,W*.36);
+    b.rot+=dt*(.5+(6-alive.length)*.18);b.x=W/2+Math.sin(b.t*.5)*Math.min(80,W*.15);
+    b.parts.forEach(function(p){p.x=b.x+Math.cos(p.a+b.rot)*R;p.y=b.y+Math.sin(p.a+b.rot)*R*.6;if(p.flash>0)p.flash-=dt;
+      if(p.hp>0){p.ft-=dt;if(p.ft<=0){p.ft=2.4+Math.random()*2;aimed(p.x,p.y,230,1,0,SUN);snd('hit')}}});
+    b.at-=dt;if(b.at<=0){b.at=alive.length?3.5:2.2;ring(b.x,b.y,alive.length?160:200,alive.length?10:16,PK,b.t);snd('hit')}
+    b.hm-=dt;if(b.hm<=0){b.hm=alive.length?3.2:2;var hn=alive.length?2:4;for(var hk=0;hk<hn;hk++)homingBolt(b.x+(hk-(hn-1)/2)*44,b.y+20,ORG,200);snd('baa')}
+    if(!alive.length){b.at2-=dt;if(b.at2<=0&&!G.laser){b.at2=4;G.laser={x:S.x,t:0,warn:.9,dur:1.1};snd('baa')}
+      if(Math.random()<dt*.35)spawnEnemy({pat:'dive'})}
+  }
+  var cr=b.kind==='core'?b.r:b.r*.8;
+  if(S.inv<=0&&Math.hypot(b.x-S.x,b.y-S.y)<cr+12)ouch();
+  b.parts.forEach(function(p){if(p.hp>0&&S.inv<=0&&Math.hypot(p.x-S.x,p.y-S.y)<40)ouch()});
+}
+
+/* ---------- ページ切替（最終ステージ） ---------- */
+function toBottom(){setTimeout(function(){window.scrollTo(0,document.documentElement.scrollHeight);if(G)G.ship.y=H-96},30)}
+function goPage(i){var id=FP[(i+FP.length)%FP.length];if(('#'+id)!==location.hash)location.hash=id;toBottom()}
+function curPage(){var i=FP.indexOf((location.hash||'#home').slice(1));return i<0?0:i}
+
+/* ---------- 入力 ---------- */
+window.addEventListener('keydown',function(e){
+  if(!ROOT.classList.contains('on'))return;
+  var k=e.key;
+  if(infoOpen){e.preventDefault();if(!e.repeat&&(k===' '||k==='Enter'||k==='Escape')&&performance.now()-infoAt>800)resume();return}
+  if(k==='Escape'){e.preventDefault();if(G.over)return;if(paused)resume();else pause();return}
+  if((k==='l'||k==='L')&&!SH.classList.contains('on')&&run){paused=true;run=false;shadeBack='pause';shade('log');return}
+  if(!run)return;
+  if(k==='m'||k==='M'){mute=!mute;flash('<span>'+(mute?'消音':'音あり')+'</span>',700);return}
+  if(k==='x'||k==='X'||k==='b'||k==='B'){useBomb();return}
+  if(k==='c'||k==='C'||k==='v'||k==='V'){useWave();return}
+  if(G.phase==='final'&&FP.length>1){if(k==='n'||k==='N'){goPage(curPage()+1);return}if(k>='1'&&k<='7'){goPage(+k-1);return}}
+  if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' '].indexOf(k)>=0)e.preventDefault();
+  keys[k.toLowerCase()]=true;
+});
+window.addEventListener('keyup',function(e){keys[e.key.toLowerCase()]=false});
+window.addEventListener('blur',function(){keys={}});
+function tp(e){var t=e.touches[0];return{x:t.clientX,y:t.clientY}}
+CV.addEventListener('touchstart',function(e){if(!run)return;e.preventDefault();var p=tp(e);touch={ox:p.x,oy:p.y,sx:G.ship.x,sy:G.ship.y}},{passive:false});
+CV.addEventListener('touchmove',function(e){if(!run||!touch)return;e.preventDefault();var p=tp(e);G.ship.x=touch.sx+(p.x-touch.ox)*1.2;G.ship.y=touch.sy+(p.y-touch.oy)*1.2},{passive:false});
+CV.addEventListener('touchend',function(){touch=null});
+window.addEventListener('resize',function(){if(ROOT.classList.contains('on'))size()});
+BTN.addEventListener('click',open);
+$('esg-nx').addEventListener('click',function(){if(G&&G.phase==='final')goPage(curPage()+1)});
+if(FP.length<2)$('esg-nx').style.display='none';
+$('esg-q').addEventListener('click',function(){pause()});
+$('esg-bm').addEventListener('click',function(){useBomb()});
+$('esg-wv').addEventListener('click',function(){useWave()});
+$('esg-lg').addEventListener('click',function(){if(run){paused=true;run=false;shadeBack='pause';shade('log')}});
+
+/* ---------- 更新 ---------- */
+function loop(now){
+  if(!run)return;
+  var dt=Math.min((now-last)/1000,.05);last=now;
+  update(dt);draw();
+  raf=requestAnimationFrame(loop);
+}
+function rects(){
+  TG.forEach(function(t){
+    if(t.dead){t.r=null;return}
+    var r=t.el.getBoundingClientRect();
+    if(r.width<2||r.height<2){t.r=null;return}
+    t.r=r;
+    if(!t.max){t.max=Math.min(6,1+Math.floor(r.width*r.height/20000));t.hp=t.max}
+  });
+}
+function hitSeg(b,x,y,hw,hh){if(b.hom)return Math.abs(x-b.x)<hw+6&&Math.abs(y-b.y)<hh+6;var y0=Math.min(b.y,b.py),y1=Math.max(b.y,b.py);return Math.abs(x-b.x)<hw&&y0<=y+hh&&y1>=y-hh}
+/* パワー1〜9：弾数・斜め弾・威力・連射が段階的に伸びる。10で「ファンネル」4基が展開し誘導弾を撃つ */
+var PN=[1,2,2,3,3,4,4,5,5,5],PD=[0,0,1,1,1,2,2,2,3,3],PDM=[1,1,1,2,2,2,3,3,3,3],PC=[.14,.13,.13,.12,.12,.11,.11,.1,.1,.1];
+/* 今のパワーで1秒に当てられる弾数の目安。ボスのHPはこれ×秒数で決める（1発=1） */
+function hps(){var p=G.pow;return (PN[p-1]+PD[p-1]*1.2)/PC[p-1]+(p>=MAXP?12:0)}
+function fireShip(S){
+  var p=G.pow,d=PDM[p-1],n=PN[p-1],dg=PD[p-1],i,spd=900+(p-1)*20;
+  for(i=0;i<n;i++)G.bul.push({x:S.x+(i-(n-1)/2)*Math.min(9,26/Math.max(1,n-1)),y:S.y-14,py:S.y-14,vx:0,vy:-spd,d:d});
+  for(i=1;i<=dg;i++){var vx=120+i*90;G.bul.push({x:S.x-8,y:S.y-8,py:S.y-8,vx:-vx,vy:-spd*.9,d:d});G.bul.push({x:S.x+8,y:S.y-8,py:S.y-8,vx:vx,vy:-spd*.9,d:d})}
+  S.cool=PC[p-1];snd('shot');
+}
+function bitPos(i){var a=G.t*2.2+i*Math.PI/2,S=G.ship;return{x:S.x+Math.cos(a)*36,y:S.y-4+Math.sin(a)*22}}
+/* 誘導弾の標的：いちばん近い敵・ボスパーツ・露出したコア・（最終ステージでは）UI */
+function nearestTarget(x,y){
+  var best=null,bd=1e12;
+  function c(px,py,o){var d=(px-x)*(px-x)+(py-y)*(py-y);if(d<bd){bd=d;best={x:px,y:py,o:o}}}
+  G.en.forEach(function(e){c(e.x,e.y,e)});
+  if(G.boss){var b=G.boss;b.parts.forEach(function(p){if(p.hp>0)c(p.x,p.y,p)});if(b.entered&&(!b.parts.length||b.parts.every(function(p){return p.hp<=0})))c(b.x,b.y,b)}
+  if(G.phase==='final'&&!best)TG.forEach(function(t){if(t.r&&!t.dead&&t.r.bottom>0&&t.r.top<H)c(t.r.left+t.r.width/2,t.r.top+t.r.height/2,t)});
+  return best;
+}
+function steer(o,tx,ty,sp,turn,dt){
+  var want=Math.atan2(ty-o.y,tx-o.x),cur=Math.atan2(o.vy,o.vx),d=want-cur;
+  while(d>Math.PI)d-=Math.PI*2;while(d<-Math.PI)d+=Math.PI*2;
+  var a=cur+Math.max(-turn*dt,Math.min(turn*dt,d));o.vx=Math.cos(a)*sp;o.vy=Math.sin(a)*sp;
+}
+/* 敵の誘導弾 */
+function homingBolt(x,y,c,sp){var dx=G.ship.x-x,dy=G.ship.y-y,L=Math.hypot(dx,dy)||1;G.bolt.push({x:x,y:y,vx:dx/L*sp*.4+(Math.random()-.5)*sp,vy:dy/L*sp*.4,t:0,c:c,hom:true,sp:sp,life:4,tr:[]})}
+function update(dt){
+  G.t+=dt;G.stT+=dt;var S=G.ship,i,j,b;
+  var fin=G.phase==='final',bossPh=G.phase==='boss',sp=SPD[G.spd];
+  if(G.msgT>0){G.msgT-=dt;if(G.msgT<=0)MSG.classList.remove('on')}
+  if(fin&&G.fade>0)G.fade=Math.max(0,G.fade-dt*.7);
+  if(bossPh&&G.fade<.7)G.fade=Math.min(.7,G.fade+dt*.5);
+  if(G.bombT>0)G.bombT-=dt;
+  if(G.waveT>0)updWave(dt);
+  /* 自機 */
+  if(!touch){
+    if(keys.arrowleft||keys.a)S.x-=sp*dt;if(keys.arrowright||keys.d)S.x+=sp*dt;
+    if(keys.arrowup||keys.w)S.y-=sp*dt;if(keys.arrowdown||keys.s)S.y+=sp*dt;
+  }
+  S.x=Math.max(16,Math.min(W-16,S.x));
+  if(fin){ /* 縦スクロールシューティング風に、ページを自動で上へ。上端に寄ると加速、下端に寄ると停止 */
+    S.y=Math.max(24,Math.min(H-24,S.y));
+    var sy=window.scrollY,spd=G.visIn>0?38:300; /* 画面内に壊す物があれば低速、無ければ高速で流す */
+    if(G.lapT>0){G.lapT-=dt;if(G.lapT<=0)toBottom()}
+    else if(sy>0){acc-=spd*dt;if(acc<=-1){var v=Math.ceil(acc);window.scrollBy(0,v);acc-=v}}
+    else if(G.visN>0&&G.adv<=0){G.lapT=1.4;flash('<b>取りこぼしあり</b><span>下からもう一周</span>',1300,1)}
+  }else{S.y=Math.max(40,Math.min(G.boss?H-60:H-24,S.y))}
+  if(S.inv>0)S.inv-=dt;
+  S.cool-=dt;
+  var fire=keys[' ']||keys.z||touch;
+  if(fire&&S.cool<=0)fireShip(S);
+  if(G.pow>=MAXP){G.bitT-=dt;if(G.bitT<=0){G.bitT=.32;var tg0=nearestTarget(S.x,S.y);if(tg0){for(var bi=0;bi<4;bi++){var bp=bitPos(bi),ang=-Math.PI/2+(bi-1.5)*.5;G.bul.push({x:bp.x,y:bp.y,py:bp.y,vx:Math.cos(ang)*650,vy:Math.sin(ang)*650,d:2,hom:true,life:2.2,tr:[]})}snd('shot')}}}
+  if(fin)rects();
+  /* 弾 */
+  for(i=G.bul.length-1;i>=0;i--){
+    b=G.bul[i];b.py=b.y;
+    if(b.hom){b.life-=dt;var tg=nearestTarget(b.x,b.y);if(tg)steer(b,tg.x,tg.y,650,7,dt);b.tr.push(b.x,b.y);if(b.tr.length>10)b.tr.splice(0,2);if(b.life<=0){G.bul.splice(i,1);continue}}
+    b.y+=b.vy*dt;b.x+=b.vx*dt;
+    if(b.y<-20||b.y>H+20||b.x<-20||b.x>W+20){G.bul.splice(i,1);continue}
+    var hit=false;
+    for(j=G.en.length-1;j>=0;j--){var e=G.en[j];if(hitSeg(b,e.x,e.y,22,20)){hit=true;e.hp-=b.d;e.flash=.12;spark(b.x,b.y,e.c,6);
+      if(e.hp<=0){G.en.splice(j,1);G.kills++;G.score+=150;boom(e.x,e.y,e.c,'#ffffff',22);snd('boom');flash('<b>+150</b>',400);drop(e.x,e.y)}else snd('hit');break}}
+    if(!hit&&G.boss&&!G.boss.dying&&(!G.boss.entered||G.boss.guard>0)&&G.boss.y>0&&hitSeg(b,G.boss.x,G.boss.y,G.boss.r,G.boss.r)){hit=true;spark(b.x,b.y,'#fff',3)}
+    if(!hit&&G.boss&&!G.boss.dying&&G.boss.entered&&!(G.boss.guard>0)){var bo=G.boss;
+      for(j=0;j<bo.parts.length;j++){var pp=bo.parts[j];if(pp.hp>0&&hitSeg(b,pp.x,pp.y,32,30)){hit=true;pp.hp-=1;pp.flash=.1;spark(b.x,b.y,SUN,5);G.score+=10;
+        if(pp.hp<=0){G.kills++;G.score+=800;boom(pp.x,pp.y,SUN,'#fff',26);snd('boom');flash('<b>「'+pp.ch+'」撃破</b>',700,1);G.pw.push({k:'P',x:pp.x,y:pp.y,t:0})}else snd('hit');break}}
+      if(!hit&&bo.y>0&&(!bo.parts.length||bo.parts.every(function(p){return p.hp<=0}))&&hitSeg(b,bo.x,bo.y,bo.r*.9,bo.r*.85)){hit=true;hurtBoss(bo,1,b.x,b.y);snd('hit')}
+      else if(!hit&&bo.parts.length&&bo.y>0&&hitSeg(b,bo.x,bo.y,bo.r,bo.r)){hit=true;spark(b.x,b.y,'#fff',4)} /* コアはまだ無敵 */
+    }
+    if(!hit&&fin){
+      var best=null,ba=1e12;
+      for(var k=0;k<TG.length;k++){var t=TG[k],r=t.r;if(!r)continue;
+        if(b.x>=r.left&&b.x<=r.right&&Math.min(b.y,b.py)<=r.bottom&&Math.max(b.y,b.py)>=r.top){var a=r.width*r.height;if(a<ba){ba=a;best=t}}}
+      if(best){hit=true;for(var dd=0;dd<b.d&&!best.dead;dd++)damage(best,b.x,Math.max(best.r.top,Math.min(b.py,best.r.bottom)))}
+    }
+    if(hit)G.bul.splice(i,1);
+  }
+  /* 編隊の出現と移動 */
+  if(G.phase==='wave'){while(G.q.length&&G.q[0].at<=G.stT)spawnEnemy(G.q.shift())}
+  else if(fin){G.spawn-=dt;if(G.spawn<=0&&G.en.length<4){G.spawn=2.6;spawnEnemy({pat:'dive'})}}
+  var stg=Math.max(0,G.stage);
+  for(i=G.en.length-1;i>=0;i--){var e2=G.en[i];e2.t+=dt;if(e2.flash>0)e2.flash-=dt;
+    if(e2.pat==='row'){e2.y+=(16+stg*4)*dt;e2.x=e2.bx+Math.sin(e2.t*1.2+e2.off)*60;if(e2.y>H+30)e2.y=-30}
+    else if(e2.pat==='snake'){e2.x+=e2.dir*(120+stg*16)*dt;e2.y=e2.by+Math.sin(e2.x/55)*36;if(e2.dir>0&&e2.x>W+30){e2.x=-30;e2.by+=48}if(e2.dir<0&&e2.x<-30){e2.x=W+30;e2.by+=48}if(e2.by>H-140)e2.by=70}
+    else{e2.y+=e2.vy*dt;e2.x+=(S.x-e2.x)*Math.min(1,dt*1.3);if(e2.y>H+30){if(fin||bossPh){G.en.splice(i,1);continue}e2.y=-30;e2.x=40+Math.random()*(W-80)}}
+    e2.ft-=dt;if(e2.ft<=0&&e2.y<S.y-60&&e2.y>0){e2.ft=(3+Math.random()*3)/df();aimed(e2.x,e2.y+14,150+stg*20,1,0,e2.c)}
+    if(S.inv<=0&&Math.hypot(e2.x-S.x,e2.y-S.y)<28){G.en.splice(i,1);boom(e2.x,e2.y,e2.c,'#fff',18);ouch()}}
+  /* ボス */
+  if(G.boss)updBoss(G.boss,dt);
+  if(G.laser){var L=G.laser;L.t+=dt;if(L.t>L.warn+L.dur)G.laser=null;else if(L.t>L.warn&&S.inv<=0&&Math.abs(S.x-L.x)<20)ouch()}
+  /* ステージクリア判定 */
+  if(G.phase==='wave'){
+    var s0=STAGES[G.stage];
+    if(!G.q.length&&!G.en.length&&!G.boss&&G.stT>1.5){
+      if(s0.boss&&!G.bossDone){G.bossDone=true;spawnBoss(s0.boss);flash('<b style="color:'+G.boss.c+'">WARNING</b><span>'+G.boss.name+' 接近</span>',2000,2);snd('baa')}
+      else if(!G.cleared&&G.infoT<=0&&G.got.length<=G.stage&&G.stage<INFO.length){G.infoT=.3}
+      else if(!G.cleared&&G.infoT<=0){G.cleared=true;G.score+=500;updHud();flash('<b>STAGE '+(G.stage+1)+' CLEAR</b><span>+500</span>',1400,2);G.adv=1.5}
+    }
+    if(G.adv>0){G.adv-=dt;if(G.adv<=0)nextStage()}
+    TL.textContent=G.q.length+G.en.length+(G.boss?1:0);
+  }
+  /* UIの反撃（最終ステージ） */
+  if(fin){
+    G.uiT-=dt;
+    if(G.uiT<=0){G.uiT=Math.max(.7,1.6-Object.keys(G.clr).length*.12);
+      var cand=TG.filter(function(t){return t.r&&!t.dead&&t.warn<=0&&t.r.top<H-120&&t.r.bottom>0});
+      if(cand.length){var tt=cand[Math.floor(Math.random()*cand.length)];tt.warn=.55;tt.el.classList.add('esg-warn')}}
+    TG.forEach(function(t){if(t.warn>0){t.warn-=dt;if(t.warn<=0){t.el.classList.remove('esg-warn');if(!t.dead&&t.r){var cx=t.r.left+t.r.width/2,cy=t.r.top+t.r.height/2;aimed(cx,cy,220,t.max>=4?3:1,.25,INK);snd('hit')}}}});
+  }
+  for(i=G.bolt.length-1;i>=0;i--){var o=G.bolt[i];
+    if(o.hom){o.life-=dt;steer(o,S.x,S.y,o.sp,o.t<2.2?2.4:.6,dt);o.tr.push(o.x,o.y);if(o.tr.length>12)o.tr.splice(0,2);if(o.life<=0){spark(o.x,o.y,ORG,6);G.bolt.splice(i,1);continue}}
+    o.x+=o.vx*dt;o.y+=o.vy*dt;o.t+=dt;
+    if(o.y>H+30||o.y<-30||o.x<-30||o.x>W+30){G.bolt.splice(i,1);continue}
+    if(S.inv<=0&&Math.hypot(o.x-S.x,o.y-S.y)<13){G.bolt.splice(i,1);ouch()}}
+  /* 資料（ボス撃破後に開く） */
+  if(G.infoT>0){G.infoT-=dt;if(G.infoT<=0){giveInfo();return}}
+  for(i=G.pw.length-1;i>=0;i--){var p=G.pw[i];p.t+=dt;p.y+=80*dt;p.x+=Math.sin(p.t*2.5)*30*dt;
+    if(p.y>H+30){G.pw.splice(i,1);continue}
+    if(Math.hypot(p.x-S.x,p.y-S.y)<28){G.pw.splice(i,1);getPw(p)}}
+  /* パーティクル */
+  for(i=G.pt.length-1;i>=0;i--){var q=G.pt[i];q.t-=dt;if(q.t<=0){G.pt.splice(i,1);continue}q.vy+=q.g*dt;q.x+=q.vx*dt;q.y+=q.vy*dt;q.a+=q.va*dt}
+  /* ページ全壊チェック（最終ステージ） */
+  if(fin){
+    var vis=0,vin=0;TG.forEach(function(t){if(!t.dead&&t.r){vis++;if(t.r.bottom>0&&t.r.top<H-40)vin++}});TL.textContent=vis;G.visN=vis;G.visIn=vin;
+    var pg=curPage();
+    if(vis===0&&!G.clr[pg]&&G.kills>0){G.clr[pg]=true;G.score+=500;updHud();
+      if(Object.keys(G.clr).length>=FP.length){flash('<b>'+(FP.length>1?'全ページ破壊完了':'タイムライン全壊')+'</b><span>……まだ何かいる</span>',2600,3);G.score+=2000;updHud();G.adv=2.8}
+      else{flash('<b>このページ全壊！ +500</b><span>次のページへ…</span>',1500,2);G.adv=1.6}}
+    if(G.adv>0){G.adv-=dt;if(G.adv<=0){
+      if(Object.keys(G.clr).length>=FP.length){startLast();return}
+      var ni=curPage()+1,tries=0;while(G.clr[ni%FP.length]&&tries<FP.length){ni++;tries++}goPage(ni);flash('<b>'+FP[ni%FP.length].toUpperCase()+'</b><span>'+(Object.keys(G.clr).length+1)+' / '+FP.length+' ページ目</span>',1200,1)}}
+  }
+  if(bossPh)TL.textContent=G.boss?G.boss.hp:0;
+}
+function ouch(){var S=G.ship;if(G.shield){G.shield=false;S.inv=1.2;spark(S.x,S.y,TLC,20);snd('hit');flash('<b>シールド破損</b>',700,1);return}S.inv=2.5;G.lives--;if(G.pow>1)G.pow--;boom(S.x,S.y,PK,SUN,24);snd('ouch');updHud();if(G.lives<=0){snd('boom');gameover(false)}else flash('<b>あと'+G.lives+'機</b>',900,1)}
+
+/* ---------- UI破壊 ---------- */
+function damage(t,x,y){
+  var el=t.el;t.hp--;G.score+=10;spark(x,y,PK,8);
+  if(!RM){el.classList.remove('esg-hit');void el.offsetWidth;el.classList.add('esg-hit')}
+  if(t.hp<=0){
+    t.dead=true;t.warn=0;el.classList.remove('esg-warn');G.kills++;G.score+=t.max*100;snd('boom');
+    var r=t.r,cs=getComputedStyle(el),bg=cs.backgroundColor,fg=cs.color;
+    if(!bg||/rgba?\(\s*\d+,\s*\d+,\s*\d+,\s*0\)/.test(bg)||bg==='transparent')bg=el.tagName==='IMG'?'#ffffff':'#FBE4EE';
+    debris(r,bg,fg);drop(x,y);
+    el.classList.remove('esg-hit');
+    if(RM){el.classList.add('esg-dead')}
+    else{el.style.transition='opacity .3s ease,transform .3s ease';el.style.opacity='0';el.style.transform='scale(.55) rotate('+(Math.random()*10-5)+'deg)';
+      setTimeout(function(){el.classList.add('esg-dead');el.style.transition='';el.style.opacity='';el.style.transform=''},320)}
+    flash('<b>+'+(t.max*100)+'</b>',450);
+  }else{
+    snd('hit');
+    if(t.hp<=t.max*.34)el.classList.add('esg-dmg2');else if(t.hp<=t.max*.67)el.classList.add('esg-dmg');
+  }
+  updHud();
+}
+function drop(x,y){
+  x=Math.max(30,Math.min(W-30,x));y=Math.max(-20,Math.min(y,H*.6));
+  G.pk++;if(G.pk>=4){G.pk=0;G.pw.push({k:Math.random()<.65?'P':Math.random()<.5?'S':'B',x:x,y:y,t:0})}
+}
+function spark(x,y,c,n){for(var i=0;i<n;i++){var a=Math.random()*6.28,v=80+Math.random()*220;G.pt.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,g:400,t:.25+Math.random()*.25,w:3,h:3,c:c,a:0,va:0})}}
+function boom(x,y,c1,c2,n){for(var i=0;i<n;i++){var a=Math.random()*6.28,v=60+Math.random()*260;G.pt.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-80,g:700,t:.5+Math.random()*.6,w:4+Math.random()*8,h:4+Math.random()*8,c:Math.random()<.6?c1:c2,a:Math.random()*6,va:(Math.random()-.5)*12})}}
+function debris(r,bg,fg){
+  var n=Math.min(48,10+Math.floor(r.width*r.height/3000)),cx=r.left+r.width/2,cy=r.top+r.height/2;
+  for(var i=0;i<n;i++){var px=r.left+Math.random()*r.width,py=r.top+Math.random()*r.height,dx=px-cx,dy=py-cy,L=Math.hypot(dx,dy)||1,v=120+Math.random()*260;
+    G.pt.push({x:px,y:py,vx:dx/L*v+(Math.random()-.5)*80,vy:dy/L*v-200,g:1000,t:.8+Math.random()*.7,w:5+Math.random()*Math.min(22,r.height/2),h:4+Math.random()*10,c:Math.random()<.7?bg:fg,a:Math.random()*6,va:(Math.random()-.5)*14})}
+}
+
+/* ---------- 描画 ---------- */
+function draw(){
+  X.clearRect(0,0,W,H);
+  var S=G.ship;
+  if(G.fade>0){X.fillStyle='rgba(20,22,43,'+G.fade+')';X.fillRect(0,0,W,H);
+    X.fillStyle='rgba(255,255,255,'+(G.fade*.9)+')';for(var i=0;i<40;i++){var sx=((i*97)%W),sy=((i*211+G.t*(30+(i%5)*12))%H);X.fillRect(sx,sy,i%3?1:2,i%3?1:2)}}
+  if(G.bombT>0){X.fillStyle='rgba(255,255,255,'+(G.bombT*.8)+')';X.fillRect(0,0,W,H)}
+  /* レーザー */
+  if(G.laser){var L=G.laser;X.save();if(L.t<L.warn){X.strokeStyle=PK;X.setLineDash([8,8]);X.lineWidth=2;X.globalAlpha=.5+Math.sin(G.t*30)*.3;X.beginPath();X.moveTo(L.x,0);X.lineTo(L.x,H);X.stroke()}
+    else{var w=18+Math.sin(G.t*40)*4;X.shadowColor=PK;X.shadowBlur=30;X.fillStyle=PK;X.globalAlpha=.85;X.fillRect(L.x-w,0,w*2,H);X.fillStyle='#fff';X.fillRect(L.x-w*.35,0,w*.7,H)}X.restore()}
+  /* 波動砲 */
+  if(G.waveT>0){var wv=G.waveT,ww=40*(wv>1.2?(1.4-wv)/.2:wv<.3?wv/.3:1)*(1+Math.sin(G.t*50)*.08),LEN=W+H;X.save();X.translate(S.x,S.y-6);X.rotate(G.waveA);X.shadowColor=PK;X.shadowBlur=40;X.fillStyle='rgba(214,51,122,.75)';X.fillRect(0,-ww,LEN,ww*2);X.fillStyle='rgba(255,255,255,.9)';X.fillRect(0,-ww*.5,LEN,ww);X.restore();
+    var tg=waveTarget();X.save();X.strokeStyle='#fff';X.lineWidth=2;X.setLineDash([6,6]);X.globalAlpha=.8;X.beginPath();X.arc(tg.x,tg.y,70+Math.sin(G.t*30)*6,0,6.29);X.stroke();X.restore()}
+  /* 破片 */
+  G.pt.forEach(function(p){X.save();X.globalAlpha=Math.min(1,p.t*2);X.translate(p.x,p.y);X.rotate(p.a);X.fillStyle=p.c;X.fillRect(-p.w/2,-p.h/2,p.w,p.h);X.restore()});
+  /* 弾 */
+  G.bul.forEach(function(b){if(b.hom&&b.tr.length>3){X.save();X.strokeStyle='rgba(111,227,255,.55)';X.lineWidth=2;X.beginPath();X.moveTo(b.tr[0],b.tr[1]);for(var k=2;k<b.tr.length;k+=2)X.lineTo(b.tr[k],b.tr[k+1]);X.lineTo(b.x,b.y);X.stroke();X.restore()}X.save();X.translate(b.x,b.y);X.rotate(Math.atan2(b.vy,b.vx)+1.5708);var c=b.d>=4?'#fff':b.d>=2?SUN:'#6FE3FF',w=2.5+b.d*.8;X.shadowColor=c;X.shadowBlur=12;X.fillStyle=c;X.beginPath();X.roundRect(-w,-10,w*2,20,3);X.fill();X.shadowBlur=0;X.fillStyle=b.d>=4?PK:'#fff';X.fillRect(-1,-7,2,10);X.restore()});
+  /* 敵弾 */
+  G.bolt.forEach(function(o){if(o.hom){if(o.tr.length>3){X.save();X.strokeStyle='rgba(255,140,66,.5)';X.lineWidth=3;X.beginPath();X.moveTo(o.tr[0],o.tr[1]);for(var k=2;k<o.tr.length;k+=2)X.lineTo(o.tr[k],o.tr[k+1]);X.lineTo(o.x,o.y);X.stroke();X.restore()}X.save();X.translate(o.x,o.y);X.rotate(Math.atan2(o.vy,o.vx));X.shadowColor=ORG;X.shadowBlur=14;X.fillStyle=ORG;X.beginPath();X.moveTo(12,0);X.lineTo(-8,-6);X.lineTo(-4,0);X.lineTo(-8,6);X.closePath();X.fill();X.shadowBlur=0;X.fillStyle='#fff';X.beginPath();X.arc(3,0,2.5,0,6.29);X.fill();X.restore();return}X.save();X.translate(o.x,o.y);X.rotate(Math.atan2(o.vy,o.vx)+1.5708);X.lineJoin='round';X.lineCap='round';X.beginPath();X.moveTo(0,-13);X.lineTo(-6,-3);X.lineTo(5,0);X.lineTo(-2,13);X.strokeStyle='rgba(20,22,43,.9)';X.lineWidth=7;X.stroke();X.strokeStyle=o.c||TLC;X.lineWidth=4;X.shadowColor=o.c||TLC;X.shadowBlur=10;X.stroke();X.strokeStyle='#fff';X.lineWidth=1.5;X.shadowBlur=0;X.stroke();X.restore()});
+  G.en.forEach(function(e){badge(e.x,e.y,21,e.ch,e.c,e.flash>0,Math.sin(e.t*3)*.06,19)});
+  if(G.boss)drawBoss(G.boss);
+    G.pw.forEach(function(p){X.save();X.translate(p.x,p.y+Math.sin(p.t*4)*3);var c=p.k==='P'?PK:p.k==='S'?TLC:SUN;X.shadowColor=c;X.shadowBlur=16;X.fillStyle=c;X.beginPath();X.arc(0,0,15,0,6.29);X.fill();X.shadowBlur=0;X.strokeStyle='#fff';X.lineWidth=2;X.stroke();X.fillStyle='#fff';X.font='700 15px "Space Grotesk",sans-serif';X.textAlign='center';X.textBaseline='middle';X.fillText(p.k,0,1);X.restore()});
+  /* 自機 */
+  if(G.shield){X.save();X.strokeStyle=TLC;X.lineWidth=2.5;X.shadowColor=TLC;X.shadowBlur=12;X.globalAlpha=.8+Math.sin(G.t*8)*.15;X.beginPath();X.arc(S.x,S.y-2,26,0,6.29);X.stroke();X.restore()}
+  if(!(S.inv>0&&Math.floor(S.inv*12)%2===0))ship(S.x,S.y,G.pow>=MAXP);
+  if(G.pow>=MAXP)for(var bi=0;bi<4;bi++){var bp=bitPos(bi);X.save();X.translate(bp.x,bp.y);X.rotate(G.t*4+bi);X.shadowColor='#6FE3FF';X.shadowBlur=10;X.fillStyle='#6FE3FF';X.beginPath();X.moveTo(0,-7);X.lineTo(5,4);X.lineTo(-5,4);X.closePath();X.fill();X.restore()}
+  /* ボスのHPゲージ（画面下・全幅） */
+  if(G.boss&&G.boss.y>0){var bo=G.boss,ph=0,pl=0;bo.parts.forEach(function(p){ph+=Math.max(0,p.hp);pl+=p.max});var cur=bo.hp+ph,tot=bo.max+pl,bw=W-32;
+    X.save();X.fillStyle='rgba(20,22,43,.82)';X.fillRect(0,H-46,W,46);
+    X.fillStyle='rgba(255,255,255,.15)';X.fillRect(16,H-18,bw,10);
+    if(pl){X.fillStyle=SUN;X.fillRect(16,H-18,bw*ph/tot,10);X.fillStyle=bo.c;X.fillRect(16+bw*ph/tot,H-18,bw*bo.hp/tot,10)}else{X.fillStyle=bo.c;X.fillRect(16,H-18,bw*bo.hp/tot,10)}
+    X.fillStyle='#fff';X.font='700 12px '+JP;X.textAlign='left';X.textBaseline='alphabetic';X.fillText('BOSS  '+bo.name+(bo.kind==='core'?(pl&&ph>0?'（文字を全部落とすとコア露出）':'（コア露出）'):''),16,H-26);
+    X.font='700 13px "Space Grotesk",sans-serif';X.textAlign='right';X.fillText('HP '+cur+' / '+tot+'  （1発=1）',W-16,H-26);X.restore()}
+}
+/* 六角バッジ（敵・ボス共通） */
+function badge(x,y,r,ch,c,fl,rot,fs){
+  X.save();X.translate(x,y);X.rotate(rot||0);
+  X.shadowColor=c;X.shadowBlur=fl?26:r*.5;
+  X.fillStyle=fl?'#fff':c;X.strokeStyle='rgba(255,255,255,.85)';X.lineWidth=Math.max(2,r*.09);
+  X.beginPath();for(var i=0;i<6;i++){var a=Math.PI/3*i-Math.PI/6;X.lineTo(Math.cos(a)*r,Math.sin(a)*r)}X.closePath();X.fill();X.shadowBlur=0;X.stroke();
+  if(ch){X.fillStyle=fl?c:'#fff';X.font='900 '+fs+'px '+JP;X.textAlign='center';X.textBaseline='middle';X.fillText(ch,0,r*.06)}
+  X.restore();
+}
+function drawBoss(b){
+  if(b.dying){X.save();var k=1-b.dying/1.6;X.globalAlpha=Math.max(0,1-k*k);X.translate(b.x,b.y);X.scale(1+k*.6,1+k*.6);X.translate(-b.x,-b.y)}
+  if(b.kind==='core'){
+    b.parts.forEach(function(p){if(p.hp>0)badge(p.x,p.y,32,p.ch,SUN,p.flash>0,Math.sin(b.t*2+p.a)*.1,30)});
+    var exposed=b.parts.every(function(p){return p.hp<=0});
+    X.save();X.translate(b.x,b.y);X.rotate(-b.rot*.5);
+    X.strokeStyle=exposed?PK:'rgba(255,255,255,.5)';X.lineWidth=3;X.setLineDash([10,6]);X.beginPath();X.arc(0,0,b.r+12,0,6.29);X.stroke();X.setLineDash([]);
+    X.restore();
+    badge(b.x,b.y,b.r,'',exposed?PK:INK,b.flash>0,b.rot*.3,0);
+    X.save();X.translate(b.x,b.y);X.fillStyle=exposed?'#fff':'rgba(255,255,255,.35)';X.font='900 15px '+JP;X.textAlign='center';X.textBaseline='middle';X.fillText('CORE',0,-8);X.font='700 11px "Space Grotesk",sans-serif';X.fillText(exposed?'OPEN':'LOCK',0,10);X.restore();
+  }else badge(b.x,b.y,b.r,b.ch,b.c,b.flash>0,Math.sin(b.t*1.5)*.05,b.r*1.15);
+  if(!b.dying&&(!b.entered||b.guard>0)){X.save();X.strokeStyle='#fff';X.lineWidth=3;X.globalAlpha=.5+Math.sin(G.t*20)*.3;X.beginPath();X.arc(b.x,b.y,b.r+10,0,6.29);X.stroke();X.restore()}
+  if(b.dying)X.restore();
+}
+function ship(x,y,mx){
+  X.save();X.translate(x,y);
+  var f=8+Math.random()*10;X.fillStyle=mx?PK:SUN;X.globalAlpha=.9;X.beginPath();X.moveTo(-5,12);X.lineTo(0,12+f*(mx?1.5:1));X.lineTo(5,12);X.closePath();X.fill();X.globalAlpha=1;
+  if(mx){X.strokeStyle=SUN;X.lineWidth=1.5;X.globalAlpha=.6+Math.sin(G.t*10)*.3;X.beginPath();X.arc(0,-2,22,0,6.29);X.stroke();X.globalAlpha=1}
+  var g=X.createLinearGradient(-14,0,14,0);g.addColorStop(0,PK);g.addColorStop(1,TLC);
+  X.fillStyle=g;X.shadowColor=mx?SUN:PK;X.shadowBlur=mx?24:14;X.beginPath();X.moveTo(0,-18);X.lineTo(14,12);X.lineTo(0,6);X.lineTo(-14,12);X.closePath();X.fill();X.shadowBlur=0;
+  X.fillStyle='#fff';X.beginPath();X.ellipse(0,-4,3,6,0,0,6.29);X.fill();
+  X.restore();
+}
+
+})();
+</script></body></html>
