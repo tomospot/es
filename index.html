@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><meta name="version" content="v97"><title>Electric Sheep 2026 参加者ポータル</title>
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Cache-Control" content="no-cache, must-revalidate"><meta name="version" content="v101"><title>Electric Sheep 2026 参加者ポータル</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--pk:#D6337A;--pkd:#A8225C;--pks:#FBE4EE;--tl:#2B9EA6;--tld:#1E7B82;--tls:#E1F3F4;--ink:#1B2340;--ink2:#4A5270;--ink3:#8A90A8;--ln:#E6E1E8;--pp:#FBF8FA;--wh:#fff;--nt:#14162B;--sun:#F2B84B;--suns:#FFF4DC;--jp:"Zen Kaku Gothic New","Hiragino Sans",sans-serif;--nm:"Space Grotesk",var(--jp)}
@@ -42,7 +42,7 @@ footer{border-top:1px solid var(--ln);padding:28px 0 40px;font-size:13px;color:v
 .desk .card{border-top:4px solid var(--pk)}.desk .card:nth-child(2){border-top-color:var(--tl)}.desk .card:nth-child(3){border-top-color:var(--sun)}
 .desk .co{font-size:13px;color:var(--ink2);font-weight:700}.desk .kind{font-size:19px;font-weight:900;margin:4px 0 6px}.desk p{margin:0;font-size:14.5px}
 .prof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.prof details.card:only-child{grid-column:1/-1}
-.prof details.card{padding:0;margin:0;border-radius:14px}
+.prof details.card{padding:0;margin:0;border-radius:14px}.prof .card.flat{padding:14px 18px;margin:0;border-radius:14px}
 .prof details.card summary{padding:14px 44px 14px 18px;position:relative;list-style:none}
 .prof details.card summary:before{content:none}
 .prof details.card summary:after{content:"＋";position:absolute;right:16px;top:12px;font-family:var(--nm);font-size:20px;color:var(--pk)}
@@ -52,7 +52,7 @@ footer{border-top:1px solid var(--ln);padding:28px 0 40px;font-size:13px;color:v
 .prof .dept{display:block;font-size:12.5px;color:var(--ink2);margin-top:2px}
 .prof .tz{display:block;font-size:13px;color:var(--tld);margin-top:6px;font-weight:500}
 .prof .body{padding:12px 18px 16px}
-.prof dl{display:grid;grid-template-columns:5.5em 1fr;gap:6px 12px;margin:0;font-size:13.5px}.prof dt{font-weight:700;color:var(--tld)}.prof dd{margin:0}.prof dd li{margin:0 0 2px 1.1em}.prof ul{margin:0;padding:0}
+.prof dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 12px;margin:0;font-size:13.5px}.prof dt{font-weight:700;color:var(--tld);white-space:nowrap}.prof dd{margin:0}.prof dd li{margin:0 0 2px 1.1em}.prof ul{margin:0;padding:0}
 .prof .msg{margin-top:10px;padding:8px 12px;background:var(--pks);border-radius:10px;font-size:14px;font-weight:700}
 .prof .tba{grid-column:1/-1;display:flex;align-items:center;justify-content:center;min-height:72px;padding:16px 18px;color:var(--ink2);border-style:dashed;font-size:14px;text-align:center}
 .ck .sub{list-style:disc;padding-left:1.2em;margin:4px 0 0}.ck .sub li{background:none;border:0;padding:0;margin:0;font-size:13px;color:var(--ink2)}.ck .sub li:before{content:none}
@@ -228,7 +228,7 @@ body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none
 <h2>サポートデスク</h2><p class="lead">本戦当日、会場にサポーター企業3社のサポートデスクを設置します。行き詰まったら、そのまま持ち込んで相談してください。</p>
 <div class="sec"><h3>3つのデスクと役割</h3><div class="desk">
 <a class="card" href="#desk-denso"><div class="co">デンソー</div><div class="kind">ロジック系サポート</div><p>技術に対する科学考証と、未来シナリオの描画に関する支援</p></a>
-<div class="card"><div class="co">日鉄ソリューションズ中部</div><div class="kind">ハード系サポート</div><p>マイコンやラズベリーパイ等の技術サポートなど</p></div>
+<a class="card" href="#desk-nssol"><div class="co">日鉄ソリューションズ中部</div><div class="kind">ハード系サポート</div><p>マイコンやラズベリーパイ等の技術サポートなど</p></a>
 <a class="card" href="#desk-aisin"><div class="co">アイシン</div><div class="kind">ワクワクを形にするサポート</div><p>未来の体験や価値につながるアイディアを形にするサポート</p></a>
 </div></div>
 <div class="sec" id="desk-denso"><h3>デンソー デスクの担当者</h3><p class="sm">「この人と話してみたい」と思ったら、その話題から切り出してみてください。</p><div class="prof">
@@ -250,7 +250,15 @@ body.esg-play{user-select:none;-webkit-user-select:none;overscroll-behavior:none
 <details class="card"><summary><span class="name">大日方 慶尚</span><span class="dept">BRプロセス改革推進部</span><span class="tz">自動車部品の品質問題対応</span></summary><div class="body"><dl><dt>得意な技術</dt><dd><ul><li>自動車部品の品質問題対応（うまく作動しない要因を見つけて対処する技術）</li><li>自動車部品の現調化対応（限られた環境下で部品をつくる技術）</li></ul></dd><dt>関わった仕事</dt><dd><ul><li>商用車向け10速オートマチックトランスミッションの企画構想</li><li>タイ・北米での現地生産化の立ち上げ（トータル26モデル）</li></ul></dd><dt>学生時代</dt><dd><ul><li>転移高歯コニカルギヤの基礎研究</li><li>硬式野球部で、プレーヤーをしながら大学リーグの運営も。寝る間もなく研究と野球に追われる生活</li></ul></dd><dt>趣味</dt><dd><ul><li>最近は子どもに巻き込まれて城めぐり</li><li>Startup Weekendにプレーヤーとして参加したり、運営をしたり</li></ul></dd></dl><p class="msg">「「ちょっとうまくいかないのだけど……」というときに、一緒に全力で要因と対応案を考えます。一緒に考えましょう！」</p></div></details>
 <details class="card"><summary><span class="name">八野 強</span><span class="dept">ものづくり人事部 アイシン学園 技能五輪課</span><span class="tz">電子回路の設計・製作、計測器を使った回路診断</span></summary><div class="body"><dl><dt>得意な技術</dt><dd><ul><li>電子回路の設計・製作、計測器を使った回路診断</li><li>組込みC・C++・Python・ROSによるGUI・システム・制御プログラミング</li><li>自律移動ロボット開発におけるアクチュエータ・センサの接続と制御</li></ul></dd><dt>関わった仕事</dt><dd><ul><li>技能五輪全国大会 電子機器組立て職種の選手（2011年 敢闘賞）、コーチとして選手育成（2018年 銅メダル）</li><li>自律移動ロボット職種の立ち上げと環境構築、選手育成（2025年 銀メダル）</li><li>職長として自律移動ロボット・工場電気設備・旋盤・フライス盤など各職種のコーチ・選手を育成</li><li>電子機器組立て特級、シーケンス制御2級、指導員免許（電子科）、QC検定2級</li></ul></dd><dt>学生時代</dt><dd><ul><li>高校生ロボコンにチャレンジ。作ったものが動くということに興味を持って取り組んだ</li></ul></dd><dt>趣味</dt><dd><ul><li>週末は妻とアニメを観たりゲームをしたり</li><li>ペット（犬・うさぎ）と戯れる</li><li>PaizaやAtCoderでプログラミングテストに挑戦（PaizaはAランク程度）</li><li>3D CAD、3Dプリンタ、ラズパイ、ArduinoでDIY</li></ul></dd></dl><p class="msg">「はんだ付けや、ハードとソフトを繋ぐことへの不安解消の一助になれば。人材育成とQC検定の経験から、問題解決の進め方などもアドバイスできるかもしれません。気軽にご相談ください。」</p></div></details>
 </div></div>
-
+<div class="sec" id="desk-nssol"><h3>日鉄ソリューションズ中部 デスクの担当者</h3><p class="sm">「ハード系サポート」のデスク。7名がチームで対応します（マイコンやラズベリーパイ等の技術サポートなど）。</p><div class="note t" style="margin:0 0 12px"><b>会社として得意な領域</b><p>システム開発（アジャイル開発、デジタルツイン、スマートファクトリー）／最適化（数理最適化技術×生成AI「OptiMagic」）／プラットフォーム構築（データ、サーバ（仮想化・クラウド）、ネットワーク）</p></div><div class="prof">
+<details class="card"><summary><span class="name">吉田 直哉</span><span class="dept">イノベーション推進センター</span><span class="tz">衛星測位・ナビゲーション・IoT</span></summary><div class="body"><dl><dt>関わった仕事</dt><dd><ul><li>人工衛星「みちびき」のサブメーター級位置精度を活用したインゴットヤードの異材対策</li><li>製鉄所内を走る特殊車両向け専用ナビゲーション（走行ルート共通化、危険箇所ガイド）</li><li>メーター監視（アナログ・7セグ・LEDランプ）ソリューションで特許を取得。SMART MANUFACTURING SUMMIT（愛知スカイエキスポ）にて展示</li><li>バーチャルオフィス：Web上に執務者のアイコンを表示し、予定表と入退室イベントで在席状況が分かるシステム。IoTセンサでトイレ個室の空き数、打合せスペースの利用状況、温湿度も表示</li></ul></dd><dt>学生時代</dt><dd><ul><li>電気回路を光回路へ置換し、発熱を減らして高速動作させるための研究。光の周波数と屈折率の異なる材質の組み合わせ・形状から光導波回路をシミュレーション</li></ul></dd><dt>趣味</dt><dd><ul><li>1970〜80年代の古い車が好きで、週末は整備やサーキット走行。整備後は空燃比計や排気温度計の計測結果と睨めっこしながら、キャブレターのジェット変更やECUの調整</li><li>たまに水上バイク、ウェイクボードも</li></ul></dd></dl></div></details>
+<details class="card"><summary><span class="name">濱﨑 周太</span><span class="dept">イノベーション推進センター</span><span class="tz">数理最適化</span></summary><div class="body"><dl><dt>関わった仕事</dt><dd><ul><li>製鉄所の操業制約を考慮した鋳造計画最適化システム（2万t/日、約700種類の材質の組み合わせ問題）</li></ul></dd></dl></div></details>
+<details class="card"><summary><span class="name">木藤 雄介</span><span class="dept">鉄鋼ソリューション事業部</span><span class="tz">数理最適化</span></summary><div class="body"><dl><dt>関わった仕事</dt><dd><ul><li>製鉄所の操業制約を考慮した鋳造計画最適化システム（2万t/日、約700種類の材質の組み合わせ問題）</li></ul></dd></dl></div></details>
+<details class="card"><summary><span class="name">加藤 聖人</span><span class="dept">鉄鋼ソリューション事業部</span><span class="tz">数理最適化</span></summary><div class="body"><dl><dt>関わった仕事</dt><dd><ul><li>製鉄所の操業制約を考慮した鋳造計画最適化システム（2万t/日、約700種類の材質の組み合わせ問題）</li></ul></dd></dl></div></details>
+<div class="card flat"><span class="name">矢﨑 琢也</span><span class="dept">鉄鋼ソリューション事業部</span></div>
+<div class="card flat"><span class="name">鈴木 智就</span><span class="dept">業務ソリューション第三事業部</span></div>
+<details class="card"><summary><span class="name">加藤 敦樹</span><span class="dept">業務ソリューション第三事業部</span><span class="tz">IoT・データ基盤・AI</span></summary><div class="body"><dl><dt>関わった仕事</dt><dd><ul><li>メーター監視（アナログ・7セグ・LEDランプ）ソリューションで特許を取得。SMART MANUFACTURING SUMMIT（愛知スカイエキスポ）にて展示</li><li>バーチャルオフィス：Web上に執務者のアイコンを表示し、予定表と入退室イベントで在席状況が分かるシステム。IoTセンサでトイレ個室の空き数、打合せスペースの利用状況、温湿度も表示</li><li>製鉄所内の配車計画シミュレーションシステム</li><li>AI Readyなデータ基盤プラットフォーム構築支援（ファイル移動しないデータ連携、AIエージェントとの接続）</li></ul></dd><dt>学生時代</dt><dd><ul><li>言葉の意味と動作の意味を紐づける研究。自然言語でロボットを動かし、ロボットの動作を自然言語で説明できるようにする深層学習の方法</li></ul></dd><dt>趣味</dt><dd><ul><li>たまにダイビング</li></ul></dd></dl></div></details>
+</div><div class="note p" style="margin:12px 0 0"><b>ひとことメッセージ</b><p>社内コンペを実施しています（賞金あり）。第1回はミニロト当選予測で1等1,200万円が当選（実際には買っていません）、第2回はKaggleに挑戦して社内1位チームが世界1031位／2657チーム。第3回は必ずAIを使うビジネスアイデアコンテストをこれから開催。優秀なアイデアはスタートアップと手を組んで新規事業へのチャレンジも。一緒にアイデアを考えて応募して、起業なんてどうですか⁉</p></div></div>
 </div></section>
 <section class="page" id="teams" data-t="運営"><div class="wrap">
 <h2>運営</h2><p class="lead">運営メンバーの紹介。当日、困ったら声をかけてください。</p>
@@ -330,7 +338,7 @@ li.addEventListener('click',function(e){if(e.target.closest('a'))return;tg()});l
 <input type="range" id="ts-seek" min="0" max="1000" value="0" aria-label="再生位置">
 <div class="ly" id="ts-ly"><p>スタジオのライトが照らす</p><p>ここは未来の入り口</p><p class="gap"></p><p>全国から集まった仲間</p><p>チームで描く</p><p>100歳になった自分を</p><p>幸せにするプロダクトをつくるんだ</p><p class="gap"></p><p>名古屋の地に集まってアイデアが飛ぶ</p><p>隣の誰かが「それいいね」って笑う</p><p>ロマンで熱くなれ</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>まだない世界を この手で描け</p><p>Electric Sheep！ 声上げろ</p><p>バカげてるほど 未来は光る</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>マイクを握れ MC-Shiva</p><p>夢を語れ ドリーム</p><p>100バスに乗って未来へ行こう</p><p>バグばっかバックパッカー 旅は続く</p><p>ちらしすし〜ず アイデア盛り合わせ</p><p>たきささえ 最後までこだわれ</p><p class="gap"></p><p>正解なんてどこにもなくて</p><p>だから自由に ひとつだけプロトタイプ</p><p>ロマンで熱くなれ</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>眠れぬ夜も アイデアに変えて</p><p>Electric Sheep！ 声上げろ</p><p>羊も踊る 未来をつくれ</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>ft_friends 答えは仲間と</p><p>PROCRASTINATER でも今はやる</p><p>O(N) 一気に駆け抜けて</p><p>printf(&quot;Hello,world!&quot;); ここから始まる</p><p>東別院テラスホールで</p><p>10個の空想がひとつの未来になる</p><p>80年先の自分が笑うように</p><p>今 伝えろ 5分で</p><p class="gap"></p><p>Electric Sheep！ 夢を見ろ</p><p>まだない世界を この手で描け</p><p>Electric Sheep！ 声上げろ</p><p>バカげてるほど 未来は光る</p><p>Electric Sheep！ 夜明けまで</p><p>声を重ねて 未来を鳴らせ</p><p>100年先まで 響け ワクワク</p><p class="gap"></p><p>またどこかで出会える</p><p>100歳になったら思い出す思い出</p></div>
 <p class="cr">作詞：加藤 智紀　作曲・制作：Suno<br>歌詞は曲に合わせてゆっくり流れます（手で動かすと数秒間止まります）</p>
-<audio id="ts-au" src="song.mp3?v=v97" preload="none"></audio>
+<audio id="ts-au" src="song.mp3?v=v101" preload="none"></audio>
 </div></div>
 <script>
 /* ===== Portal Shooter — 「サポーターズ」編隊を抜け、ボスを倒し、最後にポータルのUIと戦う隠しゲーム ===== */
@@ -429,7 +437,7 @@ function shade(kind){
     +'<div class="ctl"><span><kbd>←→↑↓</kbd>/<kbd>WASD</kbd> 移動</span><span><kbd>Space</kbd> 撃つ</span><span><kbd>X</kbd> ボム</span><span><kbd>C</kbd> 波動砲</span><span><kbd>L</kbd> 資料</span><span><kbd>M</kbd> 消音</span><span><kbd>Esc</kbd> 一時停止</span></div>'
     +'<p class="k"><b>波動砲</b>は各ステージ1回。ボスに照準が追従する必中ビームで、体力を60%削ります。<b>P</b> パワーアップ（10段階、MAXでファンネル）／<b>S</b> スピード／<b>B</b> ボム補充。やられるとパワーが1段階下がります。</p>'
     +'<p class="k">スマホは指でドラッグで移動、弾は自動。ボムと波動砲はHUDのボタンで。最終ステージは本戦タイムラインの一番下から自動で上へ進み、壊し切ると最終ボスが出ます。</p>'
-    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v97</p>';
+    +'<button class="go" id="esg-go">撃ち始める</button><button class="fx" id="esg-no">やめる</button><p class="ver">v101</p>';
   else if(kind==='pause')h='<h2>一時停止</h2><p>スコア <span class="n">'+G.score+'</span></p><button class="go" id="esg-go">続ける</button><button class="fx" id="esg-lgb">集めた資料</button><button class="fx" id="esg-no">やめてページを直す</button>';
   else if(kind==='over'){var st=G.phase==='boss'?'最終ボス戦':G.phase==='final'?'最終ステージ（ポータル侵入）':'ステージ '+(G.stage+1)+(G.boss?'のボス戦':'');
     h='<h2>'+(G.win?'完走お疲れ様でした':'撃墜されました')+'</h2><div class="n">'+G.score+'</div><p>'+(G.win?'':st+'で終了。')+'敵を '+G.kills+' 体倒し、資料を <b>'+G.got.length+'/'+INFO.length+'</b> 集めました'+(G.win?'。作るの大変だったので、プレイしてもらって何よりです。':'')+'</p><button class="go" id="esg-go">もう一回</button><button class="fx" id="esg-lgb">集めた資料を読む</button><button class="fx" id="esg-no">ページを直して戻る</button>'}
